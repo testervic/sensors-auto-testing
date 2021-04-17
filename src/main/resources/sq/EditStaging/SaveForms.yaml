@@ -1,0 +1,20 @@
+title:
+    - case_name: 编辑工作台保存表单
+testcase:
+    - element_info: //*[contains(@class, 'ant-checkbox-wrapper')]
+      find_type: xpath
+      operate_type: click
+      step: 鼠标点击-【空链接上货】
+    - element_info: //*[@title='保存链接']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【保存链接】
+    - element_info: //*[contains(@class, 'ant-tabs-extra-content')]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑完成】
+check:
+      - wait_time: 1000
+        element_info: //p[text()='该商品所有商品链接均完成编辑']
+        find_type: xpath
+        step: 检查是否编辑完成

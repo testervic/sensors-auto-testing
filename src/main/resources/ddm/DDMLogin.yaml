@@ -1,0 +1,26 @@
+title:
+    - case_name: 验证登录功能
+testcase:
+    - element_info: //*[@type='text']
+      find_type: xpath
+      operate_type: send_keys
+      text: 2020002
+      step: 点击输入账号
+    - element_info: //*[@type='password']
+      find_type: xpath
+      operate_type: send_keys
+      text: 1q2w3e4r
+      step: 点击输入密码
+    - element_info: //*[@class='login-form-button ant-btn ant-btn-primary']
+      find_type: xpath
+      operate_type: click
+      step: 点击登录按钮
+check:
+      - element_info: //*[@data-icon='poweroff']
+        find_type: xpath
+      - element_info: //*[@id="body"]/nz-spin/div/app-home/div/article/article/div/div
+        find_type: xpath
+      - element_info: //*[@id="body"]/nz-spin/div/app-home/div/footer/div/app-brand-overview
+        find_type: xpath
+      - element_info: /html/body/app-root/app-authorized/app-side-nav/div/div[1]/div/ul/li
+        find_type: xpath

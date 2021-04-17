@@ -1,0 +1,28 @@
+title:
+    - case_name: 对上传成功的图片包清空
+testcase:
+#    - element_info: /html/body/div[2]/div[2]/form/table/tbody/tr[2]/td[6]/a[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"图片修改"
+    - element_info: //span[text()='清空']
+      find_type: xpath
+      operate_type: click
+      wait_time: 2000
+      step: 点击"清空"
+    - element_info: //*[@id="clearPictureModal"]/div/div/div[2]/div/div[1]/label[1]/input
+      find_type: xpath
+      operate_type: click
+      step: 选择"清空全部图片"选项
+    - element_info: //*[@id="clearPictureModal"]/div/div/div[3]/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"按钮
+    - element_info: /html/body/div[23]/div/div/div[2]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击"ok"按钮
+check:
+      - element_info: /html/body/div/div[2]/table/tbody/tr/td/span
+        find_type: xpath
+        step: 检查批量上传按钮是否存在

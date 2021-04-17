@@ -1,0 +1,21 @@
+title:
+    - case_name: 编辑工作台-图片空间扩边
+testcase:
+    - element_info: //*[@title='扩边']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【扩边】
+    - element_info: //span[text()='扩边']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【扩边】
+    - wait_time: 5000
+      element_info: //div[@id='cropper-container']/div[3]/span[20]
+      find_type: xpath
+      operate_type: double_click
+      step: 双击该元素
+
+check:
+      - element_info: //span[text()='裁剪成功']
+        find_type: xpath
+        step: 验证是否裁剪成功

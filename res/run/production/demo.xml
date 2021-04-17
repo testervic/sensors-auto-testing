@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="wiseoper" parallel="tests" thread-count="2"> <!-- 并行执行test/classes/methods套件-->
+    <listeners>
+        <listener class-name="util.TestMonitor"/><!-- 记录日志-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+
+    <test name="DemoHomePageCheckTest-首页元素检查-molly">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.demo.DemoHomePageCheckTest"/>
+        </classes>
+    </test>
+
+</suite>
+

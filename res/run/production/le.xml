@@ -1,0 +1,409 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="wiseoper" parallel="tests" thread-count="3"> <!-- 并行地执行test/classes/methods套件-->
+    <listeners>
+<!--        <listener class-name="util.ExtentTestNGIReporterListener"/> &lt;!&ndash; 测试报告&ndash;&gt;-->
+        <listener class-name="util.TestMonitor"/><!-- 记录日志-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        <listener class-name="util.TestngListener" />
+        <listener class-name="util.RetryListener" /><!-- 失败重试，默认打开，调试可注释-->
+    </listeners>
+
+    <test name="MainProcess-生成详情页、资源图->上货->清空->上传图片主流程">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <groups>
+            <dependencies>
+                <group name="low" depends-on="middle"/>
+                <group name="middle" depends-on="high"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="test.le.detailpage.AutomaticTypesettingTest"/>
+            <class name="test.le.resourcepicture.ResourcePictureTest"/>
+            <class name="test.le.resultexport.LoadAndSynchronizationTest"/>
+            <class name="test.le.productmaterial.ImageImageEmptyTest"/>
+            <class name="test.le.productmaterial.ImageUploadLastTest"/>
+        </classes>
+    </test>
+
+    <test name="HomePageCheckTest-首页元素检查">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.homepage.HomePageCheckTest"/>
+        </classes>
+    </test>
+
+    <test name="ComprehensiveListCheckTest-商品素材-综合列表页面检查">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.ComprehensiveListCheckTest"/>
+        </classes>
+    </test>
+
+    <test name="FieldEntryTest-商品素材-字段录入字段检查-molly、deepdraw、DDTEST、testchild">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.FieldEntryTest"/>
+        </classes>
+    </test>
+
+    <test name="FieldEntryCheckTest-商品素材-字段录入字段检查-works、testhdw、Hdwtest、tryout1">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.FieldEntryCheckTest"/>
+        </classes>
+    </test>
+
+    <test name="FieldEntrySubmitTest-商品素材-字段录入提交">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.FieldEntrySubmitTest"/>
+        </classes>
+    </test>
+
+    <test name="FieldEntryPhaseTest-商品素材-期数">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.FieldEntryPhaseTest"/>
+        </classes>
+    </test>
+
+    <test name="ExcelImportTest-产品素材-批量导入Excel">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.ExcelImportTest"/>
+        </classes>
+    </test>
+
+    <test name="ExcelSystemImportTest-产品素材-上传Excel-系统模板">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.ExcelSystemImportTest"/>
+        </classes>
+    </test>
+
+    <test name="ExcelCustomImportTest-产品素材-上传Excel-自定义模板">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <groups>
+            <dependencies>
+                <group name="customTemplateUpdateProduct" depends-on="customTemplateImportExcel"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="test.le.productmaterial.ExcelCustomImportTest"/>
+        </classes>
+    </test>
+
+    <test name="DownloadExcelTemplateTest-产品素材-批量导入-创建Excel模板、在线录入">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.DownloadExcelTemplateTest"/>
+        </classes>
+    </test>
+
+    <test name="ComprehensiveListOperationTest-产品素材-综合列表各项操作">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.ComprehensiveListOperationTest"/>
+        </classes>
+    </test>
+
+    <test name="ImageSpaceOperationTest-综合列表-图片空间-裁剪、画图">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.ImageSpaceOperationTest"/>
+        </classes>
+    </test>
+
+    <test name="ImageDrawTest-综合列表-图片空间-上传、画图、重新生成资源图">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.ImageUploadDrawRebornTest"/>
+        </classes>
+    </test>
+
+    <test name="ImageDrawTest-综合列表-图片空间-复制、裁剪、扩边">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.ImageCopyTailorExpandTest"/>
+        </classes>
+    </test>
+
+    <test name="OnlineFineTuningTest-详情页-在线微调、存储及预览">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.detailpage.OnlineFineTuningTest"/>
+        </classes>
+    </test>
+
+    <test name="ProcessTrackingTest-详情页-进程跟踪">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.detailpage.ProcessTrackingTest"/>
+        </classes>
+    </test>
+
+    <test name="TemplateDesign-智能拼图-模板设计-创建模板">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.smartpuzzle.TemplateDesign"/>
+        </classes>
+    </test>
+
+    <test name="BatchPuzzleTest-智能拼图-批量拼图">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.smartpuzzle.BatchPuzzleTest"/>
+        </classes>
+    </test>
+
+    <test name="ResultsFineTuningTest-智能拼图-成果微调">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.smartpuzzle.ResultsFineTuningTest"/>
+        </classes>
+    </test>
+
+    <test name="ProductFieldExportTest-成果导出-产品字段导出">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.resultexport.ProductFieldExportTest"/>
+        </classes>
+    </test>
+
+    <test name="PictureResultExportTest-成果导出-图片结果导出">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.resultexport.PictureResultExportTest"/>
+        </classes>
+    </test>
+
+    <test name="ModelInformationTest-配置-模特信息">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+            <groups>
+                <dependencies>
+                    <group name="modifyModel" depends-on="addModel"/>
+                </dependencies>
+            </groups>
+        <classes>
+            <class name="test.le.configuration.ModelInformationTest"/>
+        </classes>
+    </test>
+
+    <test name="ModifyWashingIconTest-配置-洗涤图标">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <groups>
+            <dependencies>
+                <group name="modifyWashingIcon" depends-on="addWashingIcon"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="test.le.configuration.WashingIconTest"/>
+        </classes>
+    </test>
+
+    <test name="ShortVideoTemplateTest-短视频-短视频模板">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <groups>
+            <dependencies>
+                <group name="modifyShortVideoTemplate" depends-on="addShortVideoTemplate"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="test.le.shortvideo.ShortVideoTemplateTest"/>
+        </classes>
+    </test>
+
+    <test name="SyntheticShortVideoTest-短视频-合成短视频">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <groups>
+            <dependencies>
+                <group name="modifyShortVideoTemplate" depends-on="addShortVideoTemplate"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="test.le.shortvideo.SyntheticShortVideoTest"/>
+        </classes>
+    </test>
+
+    <test name="SmartCutoutTest-智能抠图">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.smartcutout.SmartCutoutTest"/>
+        </classes>
+    </test>
+
+    <test name="TeamplateCheck-模板查看">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.template.TeamplateCheck"/>
+        </classes>
+    </test>
+
+    <test name="CustomMaterialTest-商品互搭-自定义素材-模板新建，修改，删除，投放">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.commoditycollocation.CustomMaterialTest"/>
+        </classes>
+    </test>
+
+    <test name="CustomMaterialTest-商品互搭-自定义素材-失效搭配检索">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.commoditycollocation.FailureMatchRetrievalTest"/>
+        </classes>
+    </test>
+
+    <test name="MeasureSchematicDiagramTest-配置-测量示意图">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.configuration.MeasureSchematicDiagramTest"/>
+        </classes>
+    </test>
+
+    <test name="AutoPreinstallTest-配置-试穿报告">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <groups>
+            <dependencies>
+                <group name="modifyFittingReport" depends-on="addFittingReport"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="test.le.configuration.FittingReportTest"/>
+        </classes>
+    </test>
+
+    <test name="AutoPreinstallTest-配置-自动化预设">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <groups>
+            <dependencies>
+                <group name="modifyAutoPreinstall" depends-on="addAutoPreinstall"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="test.le.configuration.AutoPreinstallTest"/>
+        </classes>
+    </test>
+
+    <test name="PlatformConfigurationTest-配置-平台配置">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.configuration.PlatformConfigurationTest"/>
+        </classes>
+    </test>
+
+    <test name="RulesConfigurationTest-配置-规则配置">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/azzurro"/>
+        <classes>
+            <class name="test.le.configuration.RulesConfigurationTest1"/>
+            <class name="test.le.configuration.RulesConfigurationTest2"/>
+        </classes>
+    </test>
+
+
+</suite>

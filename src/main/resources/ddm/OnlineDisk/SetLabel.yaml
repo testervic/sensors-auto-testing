@@ -1,0 +1,38 @@
+title:
+    - case_name: 验证图片设置标签功能
+testcase:
+    - element_info: //*[contains(@class, 'ops-btns')]/button[7]
+      find_type: xpath
+      operate_type: click
+      step: 点击设置标签
+    - element_info:  //*[contains(@class, 'ant-select-selection__rendered')]
+      find_type: xpath
+      operate_type: click
+      step: 点击请选择文件类型
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择“原片”
+    - element_info: //*[contains(@class, 'sys-container')]/section[2]/nz-date-picker/nz-picker/span
+      find_type: xpath
+      operate_type: click
+      step: 点击拍摄日期
+    - element_info: //*[contains(@class, 'ant-calendar-footer-btn')]//*[contains(@class, 'ng-star-inserted')]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择“今天”
+    - element_info: //*[contains(@class, 'sys-container')]/section[3]/div[2]/article/nz-skeleton/nz-tag[1]
+      find_type: xpath
+      operate_type: click
+      step: 场景标签点击选择“室内”
+    - element_info: //*[contains(@class, 'sys-container')]/section[4]/div[2]/article/nz-skeleton/nz-tag[1]
+      find_type: xpath
+      operate_type: click
+      step: 拍摄方式点击选择“常规”
+    - element_info: //*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+      - element_info: //div[text()='上传记录']
+        find_type: xpath

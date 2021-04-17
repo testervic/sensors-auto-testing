@@ -1,0 +1,36 @@
+title:
+    - case_name: 短视频-修改、删除短视频模板
+testcase:
+    - element_info: //span[text()='短视频']
+      find_type: xpath
+      operate_type: click
+      step: 点击"短视频"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[7]/div/div/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"短视频模板"
+      frame: MainBoard
+    - element_info: /html/body/div/div[2]/table/tbody/tr[12]/td[4]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: (//input[@type='radio'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"FLOWING"
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击"保存"按钮
+    - element_info: /html/body/div/div[2]/table/tbody/tr[12]/td[4]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"删除"按钮
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击"确认"按钮
+check:
+    - element_info: /html/body/div/div[1]/div
+      find_type: xpath
+      step: 检查是否跳转短视频配置列表页面

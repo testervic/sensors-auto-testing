@@ -1,0 +1,24 @@
+title:
+    - case_name: 图片包上传
+testcase:
+    - element_info: uploadFilesButton
+      find_type: id
+      operate_type: click
+      step: 点击"上传文件"按钮
+    - element_info: /html/body/div[12]/div/div/div[2]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"按钮
+    - element_info: /html//input[@id='productKeyword']
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITesting
+      step: 自动排版页面输入搜索内容
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索按钮
+check:
+    - element_info: /html/body/div[2]/div[2]/form/table/tbody/tr[2]/td[2]/div/div[2]/div[2]/p[3]/span
+      find_type: xpath
+      step: 检查上传成功的图片是否存在

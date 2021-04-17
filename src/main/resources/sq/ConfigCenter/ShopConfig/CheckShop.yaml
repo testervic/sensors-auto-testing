@@ -1,0 +1,51 @@
+title:
+    - case_name: 检查系统洗涤图标
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'second-navs')]/li/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【店铺配置】
+check:
+      - element_info: //div[text()='店铺配置']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //div[text()='淘宝']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //*[contains(@class, 'add-btn')]//*[contains(@class, 'ant-btn')]
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //*[contains(@class, 'ant-table-tbody')]
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-table-row')]/td[2]
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //td[text()='1']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //a[text()='查看']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //a[text()='基本信息']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //a[text()='重新授权']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //a[text()='删除']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //a[text()='更新分组']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //a[text()='设置通用字段']
+        find_type: xpath
+        step: 检查是否店铺配置页面
+      - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-table-row')]/td[4]
+        find_type: xpath
+        step: 检查是否店铺配置页面

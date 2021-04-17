@@ -1,0 +1,90 @@
+title:
+    - case_name: 检查字段录入销售属性字段是否存在
+testcase:
+    - element_info: //body/div/ul/li[3]
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击商品属性
+    - element_info: //ul[@id='siteItems']//a[@href='#ALLFields']
+      find_type: xpath
+      operate_type: click
+      step: 点击多平台通用
+    - element_info: //ul[@id='siteItems']//a[@href='#ALLFields']
+      find_type: xpath
+      operate_type: sliding_up
+      wait_time: 3000
+      step: 向上滑动
+check:
+      - element_info: //div[@id='ALLFields']/ul/li[1]/em[.='商家编码 ']
+        find_type: xpath
+        step: 检查商家编码字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[2]/em[.='商家条形码 ']
+        find_type: xpath
+        step: 检查商家条形码字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[3]/em
+        find_type: xpath
+        step: 检查检查是否新品字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[4]/em
+        find_type: xpath
+        step: 检查质量等级字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[5]/em
+        find_type: xpath
+        step: 检查尺寸推荐表字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[6]/em
+        find_type: xpath
+        step: 检查试穿报告字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[8]/em
+        find_type: xpath
+        step: 检查材质字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[10]/em
+        find_type: xpath
+        step: 检查"面料"字段是否存在
+#      - element_info: //*[@id="field27179Container"]/em
+#        find_type: xpath
+#        step: 检查"展示面料"字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[12]/em
+        find_type: xpath
+        step: 检查"成分含量"字段是否存在
+      - element_info: //*[@id="field27795Container"]/em
+        find_type: xpath
+        step: 检查"领型"字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[25]/em
+        find_type: xpath
+        step: 检查"版型"字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[26]/em
+        find_type: xpath
+        step: 检查"风格"字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[28]/em
+        find_type: xpath
+        step: 检查"淘宝天猫风格"字段是否存在
+      - element_info: //div[@id='ALLFields']/ul/li[32]/em
+        find_type: xpath
+        step: 检查"袖型"字段是否存在
+      - element_info: /html/body/div[2]/form/div[1]/div[4]/div[1]/ul/li[17]/em
+        find_type: xpath
+        step: 检查"袖长"字段是否存在
+      - element_info: /html/body/div[2]/form/div[1]/div[4]/div[1]/ul/li[18]/em
+        find_type: xpath
+        step: 检查"衣长"字段是否存在
+      - element_info: /html/body/div[2]/form/div[1]/div[4]/div[1]/ul/li[19]/em
+        find_type: xpath
+        step: 检查"衣门襟"字段是否存在
+#      - element_info: //div[@id='ALLFields']/ul/li[37]/em
+#        find_type: xpath
+#        step: 检查"流行元素"字段是否存在
+      - element_info: (//button[text()='设置'])[1]
+        find_type: xpath
+        step: 检查"服装款式细节"字段是否存在
+#      - element_info: //div[@id='ALLFields']/ul/li[41]/em
+#        find_type: xpath
+#        step: 检查"图案(多选)"字段是否存在
+      - element_info: /html/body/div[2]/form/div[1]/div[4]/div[1]/ul/li[21]/em
+        find_type: xpath
+        step: 检查"图案"字段是否存在
+      - element_info: /html/body/div[2]/form/div[1]/div[4]/div[1]/ul/li[22]/em
+        find_type: xpath
+        step: 检查"适用年龄"字段是否存在
+      - element_info: /html/body/div[2]/form/div[1]/div[4]/div[1]/ul/li[23]/em
+        find_type: xpath
+        step: 检查"上市时间"字段是否存在

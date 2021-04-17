@@ -1,0 +1,15 @@
+title:
+    - case_name: 启用水印配置规则
+testcase:
+    - element_info: //*[contains(@class, 'ant-table-tbody')]/tr[2]/td[7]/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【启用】
+    - element_info: //*[contains(@class, 'ant-modal-confirm-btns')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【继续启用】
+check:
+      - element_info: //h3[text()='水印设置']
+        find_type: xpath
+        step: 检查是否水印设置页面

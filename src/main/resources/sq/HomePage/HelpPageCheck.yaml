@@ -1,0 +1,38 @@
+title:
+    - case_name: 检查首页元素是否存在
+testcase:
+    - element_info: .anticon-question-circle > svg
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【帮助】
+    - wait_time: 500
+      switch_window: 1
+      element_info: //div[text()='深绘客户自助服务系统']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【深绘客户自助服务系统】标题
+check:
+    - element_info: //h2[text()='帮助中心']
+      find_type: xpath
+      step: 检查"帮助中心"元素是否存在
+    - element_info: //*[contains(@class, 'user')]/span/a
+      find_type: xpath
+      step: 检查"深绘官网"元素是否存在
+    - element_info: //span[text()='配置中心']
+      find_type: xpath
+      step: 检查"配置中心"元素是否存在
+    - element_info: //span[text()='模板管理']
+      find_type: xpath
+      step: 检查"模板管理"元素是否存在
+    - element_info: //span[text()='上货工作台']
+      find_type: xpath
+      step: 检查"上货工作台"元素是否存在
+    - element_info: //span[text()='商品管理中心']
+      find_type: xpath
+      step: 检查"商品管理中心"元素是否存在
+    - element_info: //span[text()='上货管理']
+      find_type: xpath
+      step: 检查"上货管理"元素是否存在
+    - element_info: //*[@name='query']
+      find_type: xpath
+      step: 检查"搜索框"元素是否存在

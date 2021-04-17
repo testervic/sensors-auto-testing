@@ -1,0 +1,24 @@
+title:
+    - case_name: Excel系统模板加入编辑工作台
+testcase:
+    - element_info: .upload-search .ops-code-input > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: SystemExcelAutoUpload
+      step: 搜索SystemExcelAutoUpload
+    - element_info:  //*[contains(@class, 'upload-search')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【搜索】
+    - element_info:  //*[contains(@class, 'ant-table-tbody')]/tr/td/label/span/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选-SystemExcelAutoUpload
+    - element_info:  //*[contains(@class, 'upload-content')]//*[contains(@class, 'ops-btns')]/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【加入编辑工作台】
+check:
+      - element_info: //*[contains(@class, 'active')]
+        find_type: xpath
+        step: 检查是否在上传Excel页面

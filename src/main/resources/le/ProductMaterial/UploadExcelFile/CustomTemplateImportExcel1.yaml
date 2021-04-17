@@ -1,0 +1,22 @@
+title:
+    - case_name: 导入EXCEL自定义模板
+testcase:
+    - element_info: //div[text()='选择自定义模板']
+      find_type: xpath
+      operate_type: click
+      step: 选择模板
+    - element_info: //li[text()[normalize-space()='该模板禁止修改删除支持套装']]
+      find_type: xpath
+      operate_type: click
+      step: 选择模板"该模板禁止修改删除支持套装"
+    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+      find_type: xpath
+      operate_type: click
+      wait_time: 2000
+      step: 点击"确定"
+check:
+    - element_info: (//span[@nzpopovercontent='上传并解析完成'])[1]
+      find_type: xpath
+      text: 成功
+      wait_time: 10000
+      step: 检查自定义模板是否上传成功

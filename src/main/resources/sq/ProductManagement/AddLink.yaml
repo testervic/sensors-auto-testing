@@ -1,0 +1,28 @@
+title:
+    - case_name: 验证商品列表删除商品
+testcase:
+    - element_info: /html/body/app-root/app-routes/app-authorized/app-index/nz-layout/app-side-nav/div/div[1]/div[1]/ul/li[1]/a/span
+      find_type: xpath
+      operate_type: click
+      step: 点击商品列表
+    - element_info: .search-input-group .ant-input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestAddLink
+      step: 输入"AutoUITestAddLink"
+    - element_info: //*[contains(@class, 'right')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【查询】
+    - element_info: //*[contains(@class, 'ant-table-tbody')]/tr/td[7]/a[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新建链接】
+    - element_info: //*[contains(@class, 'footer-btns')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【下一步】
+check:
+    - element_info: //div[text()='商品管理']
+      find_type: xpath
+      step: 验证是否在商品管理页面

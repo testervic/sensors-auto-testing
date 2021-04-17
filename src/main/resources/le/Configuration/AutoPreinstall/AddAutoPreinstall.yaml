@@ -1,0 +1,42 @@
+title:
+    - case_name: 配置-自动化预设-新增
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/PVRPs']
+      find_type: xpath
+      operate_type: click
+      step: 点击"自动化预设"
+      frame: MainBoard
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="name"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 输入名称
+    - element_info: //*[@id="templateCheckbox4004"]
+      find_type: xpath
+      operate_type: click
+      step: 选择模板
+    - element_info: //*[@id="modelCheckbox11669"]
+      find_type: xpath
+      operate_type: click
+      step: 选择模特
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+
+check:
+    - element_info: //td[text()[normalize-space()='PSAA1595']]
+      find_type: xpath
+      step: 检查是否新建成功

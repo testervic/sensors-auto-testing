@@ -1,0 +1,67 @@
+title:
+    - case_name: 字段录入-期数
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击产品素材
+    - element_info: //div[@id='collapseProduct']//a[@href='/authorized/merchant/saleCalendar/saleCalendars']
+      find_type: xpath
+      operate_type: click
+      step: 点击期数
+      frame: MainBoard
+    - element_info: /html/body/div[1]/div[1]/div[2]/div[4]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击导出记录
+    - element_info: (//a[@class='a1 mgr20'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击下载
+    - element_info: //*[contains(@class, 'global_logo')]/a/img
+      find_type: xpath
+      operate_type: click
+      step: 点击首页
+      defaultContent: 1
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击产品素材
+    - element_info: //div[@id='collapseProduct']//a[@href='/authorized/merchant/saleCalendar/saleCalendars']
+      find_type: xpath
+      operate_type: click
+      step: 点击期数
+      frame: MainBoard
+    - element_info: /html//input[@id='searchKeyword']
+      find_type: xpath
+      operate_type: send_keys
+      text: 巡检商品
+      step: 输入"巡检商品"
+    - element_info: /html/body/div[1]/div[1]/div[2]/div[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索
+    - element_info: //*[@id="product_id_2404301"]
+      find_type: xpath
+      operate_type: click
+      step: 勾选商品
+    - element_info: /html/body/div[1]/div[2]/table/tbody/tr/td[6]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击导出
+    - element_info: (//input[@id='check_腹黑s'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 弹窗中勾选店铺
+    - element_info: (//span[@id='bulkExport'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击批量导出
+    - element_info: /html/body/div[5]/div/div/div[2]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+      - element_info: /html/body/div[1]/div[2]/table/tbody/tr[2]/td[4]/span
+        find_type: xpath
+        step: 检查是否处于打包中

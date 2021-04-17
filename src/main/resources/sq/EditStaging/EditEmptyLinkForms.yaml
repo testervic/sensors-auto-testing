@@ -1,0 +1,95 @@
+title:
+    - case_name: 编辑工作台填写表单-空链接上货
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div[2]/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑工作台】
+    - wait_time: 2000
+      switch_window: 1
+      element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestEmptyLink
+      step: 搜索"AutoUITestEmptyLink"
+    - element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: ENTER
+      step: 回车执行搜索
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(2) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-select > nz-select
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【店铺】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu-item')]
+      find_type: xpath
+      operate_type: click
+      step: 选择店铺
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(6) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-input > nz-input-group > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: 199
+      step: 输入价格
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(5) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-input > nz-input-group > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: UI自动化测试
+      step: 输入标题
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(7) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-select > nz-select
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【成分含量】
+    - element_info: .ant-select-dropdown-menu > li
+      find_type: cssSelector
+      operate_type: click
+      step: 选择-【31%-50%】
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(8) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-select > nz-select
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【质地】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li
+      find_type: xpath
+      operate_type: click
+      step: 选择-【其他】
+    - element_info: //b[text()='店铺信息']
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动到"店铺信息"
+    - element_info: //*[contains(@class, 'color-select-input')]
+      find_type: xpath
+      operate_type: send_keys
+      text: 白色
+      step: 输入"白色"
+    - element_info: //*[contains(@class, 'add-color')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【添加颜色】
+    - element_info: //*[contains(@class, 'size-select-input')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【尺码】
+    - element_info: //span[text()='S']
+      find_type: xpath
+      operate_type: click
+      step: 选择-【S】
+    - element_info: //*[contains(@class, 'scroll-container')]//*[contains(@class, 'ps-content')]/table[2]/tbody/tr/td[3]/div/input
+      find_type: xpath
+      operate_type: send_keys
+      text: 199
+      step: SKU输入价格
+    - element_info: //*[contains(@class, 'scroll-container')]//*[contains(@class, 'ps-content')]/table[2]/tbody/tr/td[4]/div/input
+      find_type: xpath
+      operate_type: send_keys
+      text: 100
+      step: SKU输入数量
+    - element_info: //*[contains(@class, 'right-tools')]/i[1]
+      find_type: xpath
+      operate_type: over_click
+      step: 点击-【保存为草稿】
+check:
+      - element_info: //div[text()='腹黑s:子账号2']
+        find_type: xpath
+        step: 检查是否保存草稿成功

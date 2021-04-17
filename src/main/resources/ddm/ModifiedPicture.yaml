@@ -1,0 +1,76 @@
+title:
+    - case_name: 验证商品列表功能
+testcase:
+    - element_info: /html/body/app-root/app-authorized/app-side-nav/div/div[1]/div/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击商品列表
+    - element_info: //*[@class='input ant-input ant-dropdown-trigger ng-untouched ng-pristine ng-valid ng-star-inserted'][@type='text'][@placeholder='品色号']
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoTest
+      step: 点击并输入搜索内容
+    - element_info: //*[@id="body"]/nz-spin/div/app-list/article/div
+      find_type: xpath
+      operate_type: click
+      step: 移除光标搜索
+    - element_info: //*[@id="body"]/nz-spin/div/app-list/article/perfect-scrollbar/div/div[1]/nz-spin/div/nz-table/nz-spin/div/div/div/div/table/thead/tr/th[1]/span/div/span/label/span[1]/input
+      find_type: xpath
+      operate_type: click
+      step: 点击全选
+    - element_info: //div[@id='body']/nz-spin[@class='ant-spin-nested-loading']//app-list[@class='ng-star-inserted']/article[@class='material-list']//app-operation-list/div/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击选片
+    - element_info: li:nth-of-type(1) > .ant-btn.ant-btn-block.ant-btn-link
+      find_type: cssSelector
+      operate_type: click
+      step: 点击修图选片
+    - element_info: //*[@class='ant-btn ant-btn-primary']
+      find_type: xpath
+      operate_type: click
+      step: 点击继续
+    - element_info: //*[@id="body"]/nz-spin/div/app-change-image-selection/div/div/div/nz-spin/div/perfect-scrollbar/div/div[1]/div/div[2]/div[1]/div/div[1]/img
+      find_type: xpath
+      operate_type: click
+      step: 点击第一张图片
+    - element_info: //*[@id="body"]/nz-spin/div/app-change-image-selection/div/div/div/nz-spin/div/perfect-scrollbar/div/div[1]/div/div[2]/div[1]/div/div[1]/div[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击第一张图片的小爱心
+    - element_info: //nz-button-group[@class='ant-btn-group']/button
+      find_type: xpath
+      operate_type: click
+      step: 点击大图选片
+    - element_info: .slick-list > div > div:nth-of-type(1) .content-middle-item-icon
+      find_type: cssSelector
+      operate_type: click
+      step: 点击小爱心
+#    - element_info: //*[@id="body"]/nz-spin/div/app-change-image-selection/div/div/div/nz-spin/div/nz-carousel/div/div/div/div[2]/button[2]/i
+    - element_info: //*[@id="body"]/nz-spin/div/app-change-image-selection/div/div/div/nz-spin/div/nz-carousel/div/div/div/div[1]/button[2]/i
+      find_type: xpath
+      operate_type: click
+      step: 点击下一张
+    - element_info: .slick-list > div > div:nth-of-type(2) .content-middle-item-icon
+      find_type: cssSelector
+      operate_type: click
+      step: 点击小爱心
+    - element_info: //div[@class='content-middle-big ng-star-inserted']/button
+      find_type: xpath
+      operate_type: click
+      step: 点击退出按钮
+    - element_info: //div[.=' 保存 ']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: //div[.='退出']
+      find_type: xpath
+      operate_type: click
+      step: 点击退出
+    - element_info: //*[@data-icon='poweroff']
+      find_type: xpath
+      operate_type: click
+      step: 点击退出图档
+check:
+      - element_info: //*[@type='text']
+        find_type: xpath

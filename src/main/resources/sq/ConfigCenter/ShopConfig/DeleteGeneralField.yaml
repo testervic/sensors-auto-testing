@@ -1,0 +1,31 @@
+title:
+    - case_name: 检查系统洗涤图标
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'second-navs')]/li/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【店铺配置】
+    - element_info: //div[text()='淘宝']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【淘宝】
+    - element_info: //a[text()='设置通用字段']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【设置通用字段】
+    - element_info: //*[contains(@class, 'field-form-list')]//*[contains(@class, 'ant-spin-container')]/app-field-form/div/div/div/div/div/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【删除】
+    - element_info: //*[contains(@class, 'ant-modal-footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定删除】
+check:
+      - element_info: //a[text()='店铺配置']
+        find_type: xpath
+        step: 检查是否在店铺配置页面

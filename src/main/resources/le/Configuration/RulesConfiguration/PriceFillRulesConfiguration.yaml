@@ -1,0 +1,77 @@
+title:
+    - case_name: 配置-规则配置-价格填写规则配置
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/exchangeConfig']
+      find_type: xpath
+      operate_type: click
+      step: 点击"规则配置"
+      frame: MainBoard
+    - element_info: //span[text()='价格填写规则配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击价格填写规则配置
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: (//input[@id='price'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 1
+      step: 输入最小价格
+    - element_info: (//input[@id='price'])[2]
+      find_type: xpath
+      operate_type: send_keys
+      text: 9999
+      step: 输入最大价格
+    - element_info: //label[text()='设置价格范围']
+      find_type: xpath
+      operate_type: click
+      step: 点击使图标加载
+    - element_info: /html/body/div[1]/form/ul/li[2]/div[1]/div/div/div[3]/ul/li[2]/ul/li[1]/a
+      find_type: xpath
+      operate_type: click
+      step: 选择第一个类目
+    - element_info: //input[@data-code='价格']
+      find_type: xpath
+      operate_type: click
+      step: 选择价格
+    - element_info: //button[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: /html/body/div[1]/table/tbody/tr[3]/td[4]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: //input[@data-code='零售价']
+      find_type: xpath
+      operate_type: click
+      step: 增加选择零售价
+    - element_info: //button[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: /html/body/div[1]/table/tbody/tr[3]/td[4]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认
+
+
+
+check:
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      step: 检查是否删除成功

@@ -1,0 +1,43 @@
+title:
+    - case_name: 验证商品属性搜索功能
+testcase:
+    - element_info: //div[text()='选择品牌']
+      find_type: xpath
+      operate_type: click
+      step: 点击选择品牌
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[8]
+      find_type: xpath
+      operate_type: click
+      step: 点击男生女生
+    - element_info: //div[text()='选择年份']
+      find_type: xpath
+      operate_type: click
+      step: 点击选择年份
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择2020
+    - element_info: //div[text()='选择季节']
+      find_type: xpath
+      operate_type: click
+      step: 点击选择季节
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择春夏
+    - element_info: //*[contains(@class, 'Search-input')]/div/formly-form/formly-field[5]/formly-form-field/nz-form-item/nz-form-control/div/span/dd-form-input/nz-input-group/input
+      find_type: xpath
+      operate_type: send_keys
+      text: 衬衫
+      step: 输入分类
+    - element_info: //div[text()='商品状态']
+      find_type: xpath
+      operate_type: click
+      step: 点击选择春夏
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择春夏
+check:
+      - element_info: //*[contains(@class, 'picture-box')]
+        find_type: xpath

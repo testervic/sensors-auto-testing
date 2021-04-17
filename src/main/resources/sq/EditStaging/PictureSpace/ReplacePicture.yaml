@@ -1,0 +1,41 @@
+title:
+    - case_name: 编辑工作台-图片空间替换
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div[2]/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑工作台】
+    - wait_time: 2000
+      switch_window: 1
+      element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestPictureSpace
+      step: 搜索"AutoUITestPictureSpace"
+    - element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: ENTER
+      step: 回车执行搜索
+    - wait_time: 1000
+      element_info: //*[contains(@class, 'list-container')]/div[2]/div/div/app-picture-list/nz-spin/div/section/div/app-picture-module/div/div/a
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑】
+    - wait_time: 500
+      switch_window: 1
+      element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[18]/p/em/img
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-模特图最后一张图片上
+    - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[18]/span/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【替换】
+check:
+      - element_info: //div[text()='替换成功']
+        find_type: xpath
+        step: 验证是否替换成功

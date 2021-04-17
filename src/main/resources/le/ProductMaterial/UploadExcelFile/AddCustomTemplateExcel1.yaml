@@ -1,0 +1,210 @@
+title:
+    - case_name: 下创建EXCEL自定义模板(下)
+testcase:
+#    - element_info: (//input[@type='checkbox'])[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"全选"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/nz-table/nz-spin/div/div/div/div/table/tbody/tr[1]/td[3]/nz-select/div/div
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"第一个sheet"
+#    - element_info: //li[text()[normalize-space()='SPU数据']]
+#      find_type: xpath
+#      operate_type: click
+#      step: 选择"SPU"
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/nz-table/nz-spin/div/div/div/div/table/tbody/tr/td[3]/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      step: 点击"sheet"
+    - element_info: //li[text()[normalize-space()='SKU数据']]
+      find_type: xpath
+      operate_type: click
+      step: 选择"SKU"
+    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"
+    - element_info: (//button[@class='ant-btn ant-btn-link'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"货号-字段匹配"
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击"第一个选项"
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+      find_type: xpath
+      operate_type: send_keys
+      text: SKU-货号
+      wait_time: 5000
+      step: 输入"SKU-货号"
+    - element_info: /html/body/div[1]/div[5]/div/div/div/ul/li
+      find_type: xpath
+      operate_type: click
+      wait_time: 20000
+      step: 点击"SKU-货号"
+    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"
+    - element_info: (//button[@class='ant-btn ant-btn-link'])[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击"尺码-字段匹配"
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击"第二个选项"
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+      find_type: xpath
+      operate_type: send_keys
+      text: SPU-上衣尺码
+      step: 输入"SPU-上衣尺码"
+    - element_info: //li[text()[normalize-space()='SPU-上衣尺码']]
+      find_type: xpath
+      operate_type: click
+      step: 点击"SPU-上衣尺码"
+    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"
+#
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: SPU-货号
+#      step: 点击输入"SPU-货号"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: (//button[@class='ant-btn ant-btn-link'])[4]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"零售价-字段匹配"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      operate_type: send_keys
+#      text: SPU-价格
+#      step: 点击输入"SPU-价格"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: (//button[@class='ant-btn ant-btn-link'])[7]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"数量-字段匹配"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      operate_type: send_keys
+#      text: SPU-数量
+#      step: 点击输入"SPU-数量"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: (//button[@class='ant-btn ant-btn-link'])[10]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"标题-字段匹配"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      operate_type: send_keys
+#      text: SPU-淘宝标题
+#      step: 点击输入"SPU-淘宝标题"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: (//button[@class='ant-btn ant-btn-link'])[13]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"大类-字段匹配"
+#    - element_info: (//span[@class='ant-radio']//input)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"组合匹配"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/form/nz-form-item[1]/nz-form-control/div/span/div/nz-select/div/div/div/div/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: 大类名称
+#      step: 点击输入"大类名称"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/form/nz-form-item[2]/nz-form-control/div/span/div/nz-select/div/div/div/div/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: 小类名称
+#      step: 点击输入"大类名称"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[3]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: 类目
+#      step: 点击输入"类目"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: //span[text()=' 自定义sku ']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"自定义sku"
+#    - element_info: (//button[@class='ant-btn ant-btn-link'])[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"货号-字段匹配"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: SKU-货号
+#      step: 点击输入"SKU-货号"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: (//button[@class='ant-btn ant-btn-link'])[4]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"尺码-字段匹配"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: SKU-SKU码
+#      step: 点击输入"SKU-SKU码"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: (//button[@class='ant-btn ant-btn-link'])[7]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"尺码-字段匹配"
+#    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: SPU-颜色
+#      step: 点击输入"SPU-颜色"
+#    - element_info: (//div[@class='ant-modal-footer ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"确定"
+#    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-field-settings/nz-spin/div/div[1]/nz-table/nz-spin/div/div/div/div/div[2]/table/tbody/tr[3]/td[6]/button[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"填写值匹配"
+    - element_info: (//div[@class='btn-container']//button)[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"下一步"
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-template-settings/div/div[1]/form[1]/nz-form-item/nz-form-control/div/span/input
+      find_type: xpath
+      operate_type: send_date_now
+      text: 自动化测试模板可删
+      step: 点击输入"模板"
+    - element_info: (//div[@class='btn-container']//button)[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击"创建模板"
+check:
+    - element_info: //span[text()='创建成功']
+      find_type: xpath
+      step: 检查模板是否创建成功

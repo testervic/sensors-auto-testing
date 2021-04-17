@@ -1,0 +1,73 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="wiseoper" parallel="tests" thread-count="2"> <!-- 并行地执行test套件-->
+    <listeners>
+<!--        <listener class-name="util.ExtentTestNGIReporterListener"/> &lt;!&ndash; 测试报告&ndash;&gt;-->
+        <listener class-name="util.TestMonitor"/><!-- 记录日志-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+<!--    <test name="DDMLoginTest-图档登录">-->
+<!--        <parameter name="browserType" value="chrome" />-->
+<!--        <parameter name="browserVersion" value="" />-->
+<!--        <parameter name="remoteIP" value="" />-->
+<!--        <parameter name="appURL" value="http://www.deepdraw.biz/web/ddm/#/passport/account"/>-->
+<!--        <classes>-->
+<!--            <class name="test.ddm.DDMLoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="ImportProductTest-商品列表-商品导入">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/web/ddm/#/passport/account"/>
+        <classes>
+            <class name="test.ddm.ImportProductTest"/>
+        </classes>
+    </test>
+    <test name="ProductListTest-商品列表-查看文件">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/web/ddm/#/passport/account"/>
+        <classes>
+            <class name="test.ddm.ProductListTest"/>
+        </classes>
+    </test>
+    <test name="OnlineDiskTest-素材网盘-文件操作">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/web/ddm/#/passport/account"/>
+        <classes>
+            <class name="test.ddm.OnlineDiskTest"/>
+        </classes>
+    </test>
+    <test name="SearchCenterTest-搜索中心-商品搜索">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/web/ddm/#/passport/account"/>
+        <classes>
+            <class name="test.ddm.SearchCenterTest"/>
+        </classes>
+    </test>
+    <test name="ModifiedPictureTest-商品列表-修图选片">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/web/ddm/#/passport/account"/>
+        <classes>
+            <class name="test.ddm.ModifiedPictureTest"/>
+        </classes>
+    </test>
+    <test name="HeadPictureTest-商品列表-头图选片">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.deepdraw.biz/web/ddm/#/passport/account"/>
+        <classes>
+            <class name="test.ddm.HeadPictureTest"/>
+        </classes>
+    </test>
+</suite>
+

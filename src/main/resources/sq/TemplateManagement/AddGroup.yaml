@@ -1,0 +1,47 @@
+title:
+    - case_name: 模板管理-添加模板与模特组合
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【模板管理】
+    - element_info: //a[text()='模板与模特组合']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【模板与模特组合】
+    - element_info: //*[contains(@class, 'header')]//*[contains(@class, 'operate')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【添加新组合】
+    - element_info: //*[contains(@class, 'ant-form-item-children')]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITestGroups
+      step: 输入组合名称"AutoUITestGroups"
+    - element_info: //*[contains(@class, 'ant-form')]/nz-form-item[2]/div/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【选择模板】
+    - element_info: //*[contains(@class, 'item-picture')]
+      find_type: xpath
+      operate_type: click
+      step: 勾选模板
+    - element_info: //*[contains(@class, 'footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+    - element_info: //*[contains(@class, 'operate')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【保存】
+
+
+
+#    - element_info: .edit-form .body > nz-upload > div > div > input
+#      find_type: cssSelector
+#      operate_type: display
+#      step: 显示上传全身照
+check:
+      - element_info: //span[text()='添加模特模板组合']
+        find_type: xpath
+        step: 检查是否在添加模特页面

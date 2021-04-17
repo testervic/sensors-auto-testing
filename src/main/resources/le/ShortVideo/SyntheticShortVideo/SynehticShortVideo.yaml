@@ -1,0 +1,40 @@
+title:
+    - case_name: 短视频-合成短视频
+testcase:
+    - element_info: //span[text()='短视频']
+      find_type: xpath
+      operate_type: click
+      step: 点击"短视频"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[7]/div/div/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"合成短视频"
+      frame: MainBoard
+    - element_info: //input[@placeholder='选择年度']
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动到年度
+    - element_info: //span[text()='2020年度']
+      find_type: xpath
+      operate_type: click
+      step: 点击2020年度
+    - element_info: (//span[text()='选择模板'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击模板
+    - element_info: (//span[text()='NEW_PATH'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 选择模板
+    - element_info: (//a[@class='a1'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"合成"按钮
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击"确认"按钮
+check:
+    - element_info: /html/body/div[1]/div[1]/div[1]
+      find_type: xpath
+      step: 检查是否跳转短视频生成进程页面

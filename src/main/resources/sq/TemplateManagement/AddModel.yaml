@@ -1,0 +1,54 @@
+title:
+    - case_name: 模板管理-添加模特
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【模板管理】
+    - element_info: //a[text()='模特管理']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【模特管理】
+    - element_info: //*[contains(@class, 'operate')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【添加模特】
+    - element_info: //*[contains(@class, 'edit-form')]/form/nz-form-item/nz-form-control/div/span/input
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITest1
+      step: 输入模特名称"AutoUITest1"
+    - element_info: //*[contains(@class, 'ant-radio-group')]/label/span
+      find_type: xpath
+      operate_type: click
+      step: 点击-【性别】
+    - element_info: .ant-table-tbody .ant-table-row > td > nz-form-control > div > span > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: 170
+      step: 输入身高"170"
+    - element_info: .ant-table-tbody .ant-table-row > td:nth-of-type(2) > nz-form-control > div > span > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: 65
+      step: 输入体重"65"
+    - element_info: .ant-table-tbody .ant-table-row > td:nth-of-type(3) > nz-form-control > div > span > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: 18
+      step: 输入年龄"18"
+    - element_info: .ant-table-tbody .ant-table-row > td:nth-of-type(4) > nz-form-control > div > span > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: 60
+      step: 输入年龄"60"
+
+
+#    - element_info: .edit-form .body > nz-upload > div > div > input
+#      find_type: cssSelector
+#      operate_type: display
+#      step: 显示上传全身照
+check:
+      - element_info: //span[text()='添加模特']
+        find_type: xpath
+        step: 检查是否在添加模特页面

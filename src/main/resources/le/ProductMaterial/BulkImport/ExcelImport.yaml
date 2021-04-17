@@ -1,0 +1,20 @@
+title:
+    - case_name: 检查批量导入功能导入Excel是否成功(上)
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击"产品素材"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[1]/div/div/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"批量导入"
+      frame: MainBoard
+    - element_info: /html/body/div[1]/form/div[1]/ul/div[4]/li[1]/b/label[2]/input
+      find_type: xpath
+      operate_type: click
+      step: 点击"更新"
+check:
+      - element_info: /html/body/div[1]/form/div[1]/ul/div[4]/li[3]/b/span[1]
+        find_type: xpath
+        step: 检查"导入本期产品资料数据表"按钮是否存在

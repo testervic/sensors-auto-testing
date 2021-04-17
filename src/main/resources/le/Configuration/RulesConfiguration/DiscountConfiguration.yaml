@@ -1,0 +1,102 @@
+title:
+    - case_name: 配置-规则配置-折扣配置
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/exchangeConfig']
+      find_type: xpath
+      operate_type: click
+      step: 点击"规则配置"
+      frame: MainBoard
+    - element_info: //span[text()='折扣配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击折扣配置
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="name"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 输入折扣率规则名称
+    - element_info: //em[text()='设置名称']
+      find_type: xpath
+      operate_type: click
+      step: 点击使图标加载
+    - element_info: //*[@id="discount"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 2
+      step: 填写折扣率
+    - element_info: //em[text()='设置名称']
+      find_type: xpath
+      operate_type: click
+      step: 点击使图标加载
+    - element_info: //*[@id="retainDecimal"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 2
+      step: 填写保留小数位
+    - element_info:  //li[text()='男装']
+      find_type: xpath
+      operate_type: click
+      step: 点击男装
+    - element_info:  /html/body/div[1]/div[2]/form/div[1]/ul/li[4]/div/div/div/div[3]/ul/li[2]/ul/li[1]/a
+      find_type: xpath
+      operate_type: click
+      wait_time: 2000
+      step: 点击男装第一个类目
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: (//font[text()='已启用'])[4]
+      find_type: xpath
+      operate_type: click
+      step: 切换为禁用
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认
+    - element_info: (//a[text()[normalize-space()='已禁用']])[6]
+      find_type: xpath
+      operate_type: click
+      step: 切换为启用
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认
+    - element_info: /html/body/div[1]/div[2]/div[1]/table/tbody/tr[10]/td[5]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: //a[@data-spin='down']//i[1]
+      find_type: xpath
+      operate_type: click
+      step: 下调小数点后允许保留小数位
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: /html/body/div[1]/div[2]/div[1]/table/tbody/tr[10]/td[5]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认
+
+
+check:
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      step: 检查是否删除成功

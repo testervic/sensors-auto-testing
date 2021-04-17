@@ -1,0 +1,27 @@
+title:
+    - case_name: 验证图片上传功能
+testcase:
+    - element_info: //*[contains(@class, 'ng-tns-c19-11')]/div[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击自定义文件夹
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.99960a568c594ab5b934e11e36b42758.c2dfd72b9a004ec6b9cdfe21933f3f2e']
+      find_type: xpath
+      operate_type: click
+      step: 点击AutoTestDontThouch
+    - element_info: //*[contains(@class, 'ops-btns')]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击新建文件夹
+    - element_info: //*[contains(@class, 'ant-modal-body')]//*[contains(@class, 'ant-input-group')]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoNewFloder
+      step: 输入文件夹名称
+    - element_info: //*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+      - element_info: //div[text()='上传记录']
+        find_type: xpath

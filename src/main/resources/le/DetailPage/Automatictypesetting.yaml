@@ -1,0 +1,61 @@
+title:
+    - case_name: 检查生成详情页功能
+testcase:
+#    - element_info: //*[contains(@class, 'global_logo')]/a/img
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击首页logo
+#    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[2]/a/span[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"详情页"
+#    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[2]/div/div/a[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"自动排版"
+#      frame: MainBoard
+#    - element_info: //*[@id="productKeyword"]
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: 巡检商品Testing
+#      step: 搜索商品
+#    - element_info: /html/body/div[2]/div[1]/div[2]/div[1]/span
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"搜索"按钮
+    - element_info: //*[@id="productId2404301"]
+      find_type: xpath
+      operate_type: click
+      step: 勾选商品
+    - element_info: /html/body/div[2]/div[2]/form/table/tbody/tr[2]/td[4]/div/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击添加模板
+    - element_info: /html/body/div[8]/div/div/div/div/div/div/div/div[3]/ul/li[1]/a[2]/i
+      find_type: xpath
+      operate_type: click
+      step: 选择第一个模板
+    - element_info: /html/body/div[8]/div/div/div/div/div/div/div/div[3]/ul/li[2]/a[2]/i
+      find_type: xpath
+      operate_type: click
+      step: 选择第二个模板
+    - element_info: /html/body/div[8]/div/div/div/div/div/div/div/div[4]/div[2]/a[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"按钮
+    - element_info: /html/body/div[2]/div[3]/div/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"生成详情页"按钮
+    - element_info: /html/body/div[8]/div/div/div/div/div/div[3]/div[2]/a[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"按钮
+    - element_info: /html/body/div[8]/div/div/div[2]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击"OK"按钮
+check:
+    - element_info: /html/body/div/div[2]/table/tbody/tr[2]/td[7]/span
+      find_type: xpath
+      step: 检查生成详情页是否成功

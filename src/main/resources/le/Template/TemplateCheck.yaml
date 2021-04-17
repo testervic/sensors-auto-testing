@@ -1,0 +1,25 @@
+title:
+    - case_name: 模板
+testcase:
+    - element_info: //span[text()='模板']
+      find_type: xpath
+      operate_type: click
+      step: 点击"模板"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[9]/div/div/a
+      find_type: xpath
+      operate_type: click
+      step: 点击"已有模板"
+      frame: MainBoard
+    - element_info: (//div[@class='item']//img)[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击第一个"模板"
+    - element_info: /html/body/div/div[2]
+      find_type: xpath
+      operate_type: sliding_up
+      switch_window: 1
+      step: 向上滑动
+check:
+  - element_info: //input[@type='button']
+    find_type: xpath
+    step: 验证"关闭"是否存在

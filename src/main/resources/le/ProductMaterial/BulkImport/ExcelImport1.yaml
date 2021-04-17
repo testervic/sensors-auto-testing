@@ -1,0 +1,19 @@
+title:
+    - case_name: 检查批量导入功能导入Excel是否成功(下）
+testcase:
+    - element_info: /html/body/div[1]/form/div[2]/div/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"提交"按钮
+#      frame: MainBoard
+#    - element_info: /html/body/div[1]/div[2]/table/tbody/tr[2]/td[5]/span
+#      find_type: xpath
+#      step: 等待
+#    - element_info: (//td[@class='td2']//a)[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"查看详细"
+check:
+    - element_info: (//td[text()='ExcelImportTest-AutoUITest-ZW.xlsx'])[1]
+      find_type: xpath
+      step: 检查是否加入上传队列

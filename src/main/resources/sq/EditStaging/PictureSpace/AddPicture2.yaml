@@ -1,0 +1,16 @@
+title:
+    - case_name: 编辑工作台-图片空间-上传图片
+testcase:
+    - element_info: //div[text()='开始上传']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【开始上传】
+    - wait_time: 5000
+      element_info: //div[text()='关闭']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【关闭】
+check:
+      - element_info: //i[text()='19']
+        find_type: xpath
+        step: 验证是否图片是否上传成功

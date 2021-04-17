@@ -1,0 +1,44 @@
+title:
+    - case_name: 检查系统洗涤图标
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'second-navs')]/li/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【店铺配置】
+    - element_info: //div[text()='淘宝']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【淘宝】
+    - element_info: //a[text()='设置通用字段']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【设置通用字段】
+    - element_info: //*[contains(@class, 'field-form-list')]/div/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增店铺通用字段】
+    - element_info: //*[contains(@class, 'ant-form-item-control')]//*[contains(@class, 'ant-form-item-children')]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITest
+      step: 输入"AutoUITest"
+    - element_info: //*[contains(@class, 'field-form-list')]//*[contains(@class, 'ant-spin-container')]/app-field-form/div/div/div/formly-form/formly-field[5]/formly-form-field/nz-form-item/nz-form-control/div/span/dd-form-select/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【品牌】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu-item')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【测试】
+    - element_info: //*[contains(@class, 'field-form-list')]//*[contains(@class, 'ant-spin-container')]/app-field-form/div/div/div/div/div/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【保存】
+check:
+      - element_info: //a[text()='店铺配置']
+        find_type: xpath
+        step: 检查是否在店铺配置页面

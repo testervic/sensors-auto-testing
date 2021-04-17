@@ -1,0 +1,20 @@
+title:
+    - case_name: 模板管理-检查模板
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【模板管理】
+    - element_info: //*[contains(@class, 'template-list')]/div/a/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-第一个模板
+    - switch_window: 1
+      element_info: //strong[text()='模板名称']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【模板名称】
+check:
+      - element_info: //*[contains(@class, 'user_bot44')]
+        find_type: xpath
+        step: 检查是否在我的模板页面

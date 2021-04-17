@@ -1,0 +1,22 @@
+title:
+    - case_name: 导入EXCEL自定义模板
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击"产品素材"
+    - element_info: //a[@href='/web/pim-shared/#/upload/sku/system-templates']
+      find_type: xpath
+      operate_type: click
+      step: 点击"上传Excel文件"
+#      frame: MainBoard
+    - element_info: (//div[@role='tab']//a)[2]
+      find_type: xpath
+      operate_type: click
+      switch_window: 1
+      step: 点击"使用自定义模板"
+check:
+    - element_info: (//span[text()=' 成功 '])[2]
+      find_type: xpath
+      text: 成功
+      step: 检查模板是否创建成功

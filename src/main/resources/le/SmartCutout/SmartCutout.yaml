@@ -1,0 +1,8 @@
+title:
+    - case_name: 智能抠图-(上)
+testcase:
+    - element_info: //span[text()='智能抠图']
+      find_type: xpath
+      operate_type: click
+      step: 点击"智能抠图"
+      frame: MainBoard

@@ -1,0 +1,45 @@
+title:
+    - case_name: 新增水印配置分组
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'clickable')]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击-【水印配置】
+    - element_info: //*[contains(@class, 'operate-btn')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增】
+    - element_info: //*[contains(@class, 'ant-input')]
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITest
+      step: 输入"水印名称"
+    - element_info: //*[contains(@class, 'ant-form')]/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【渠道】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li
+      find_type: xpath
+      operate_type: click
+      step: 选择"淘宝"
+    - element_info: //*[contains(@class, 'ant-form')]/nz-form-item[3]/nz-form-control/div/span/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【店铺】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu-item')]
+      find_type: xpath
+      operate_type: click
+      step: 选择"腹黑S：子账号2"
+    - element_info: //*[contains(@class, 'ant-modal-footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+
+check:
+      - element_info: //h3[text()='水印设置']
+        find_type: xpath
+        step: 检查是否新增测量示意图

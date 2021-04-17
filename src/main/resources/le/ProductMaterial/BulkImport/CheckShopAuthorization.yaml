@@ -1,0 +1,126 @@
+title:
+    - case_name: 在线录入-检查店铺是否授权-淘宝
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击"产品素材"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[1]/div/div/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"批量导入"
+      frame: MainBoard
+    - element_info: (//input[@type='radio'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 选择"在线数据导入"
+    - element_info: (//input[@type='checkbox'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 取消"新加坡"渠道
+    - element_info: (//input[@type='checkbox'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 取消"新加坡"渠道
+    - element_info: (//input[@type='checkbox'])[3]
+      find_type: xpath
+      operate_type: click
+      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[4]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[5]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[6]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[7]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[8]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[9]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[10]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[11]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[12]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[13]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[14]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[15]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[16]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[17]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[18]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[19]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[20]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: (//input[@type='checkbox'])[21]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+#    - element_info: //label[text()[normalize-space()='淘宝']]
+#      find_type: xpath
+#      operate_type: click
+#      step: 取消"新加坡"渠道
+    - element_info: //li[@data-id='5']
+      find_type: xpath
+      operate_type: click
+      step: 点击"女装"类目
+    - element_info: //li[@data-id='9010']
+      find_type: xpath
+      operate_type: click
+      step: 点击"衬衫(短)"类目
+    - element_info: //div[@class='clear_float m-b-md']//input[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: http://item.taobao.com/item.htm?id=631662452970
+      step: 输入在线地址
+    - element_info: //input[@placeholder='输入货号']
+      find_type: xpath
+      operate_type: send_date_now
+      text: OnlineEntry
+      step: 输入货号
+check:
+      - element_info: //span[text()='提交']
+        find_type: xpath
+        step: 检查"提交"是否存在

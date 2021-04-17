@@ -1,0 +1,132 @@
+title:
+    - case_name: 配置-测量示意图
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/templateResource/measureInstruction']
+      find_type: xpath
+      operate_type: click
+      step: 点击"测量示意图"
+      frame: MainBoard
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: /html/body/div[1]/div[2]/div/div/div/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击切换为启用状态
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: /html/body/div[1]/div[2]/div/div/div/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击切换为禁用状态
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: //span[text()='自定义测量示意图']
+      find_type: xpath
+      operate_type: click
+      wait_time: 1500
+      step: 点击自定义测量示意图
+    - element_info: (//span[@title='点击禁用'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击第一个示意图的禁用
+    - element_info: (//span[@title='点击启用'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击第一个示意图的启用
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: /html/body/div[1]/div[2]/div/div/div/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击切换为启用状态
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: /html/body/div[1]/div[2]/div/div/div/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击切换为禁用状态
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: //span[text()='自定义测量示意图']
+      find_type: xpath
+      operate_type: click
+      wait_time: 1500
+      step: 点击自定义测量示意图
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: /html/body/div[1]/div[2]/div/div/div/span[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //li[text()='背带裙']
+      find_type: xpath
+      operate_type: click
+      step: 选择背带裙
+
+
+check:
+    - element_info: (//li[text()='背带裙'])[2]
+      find_type: xpath
+      step: 检查是否选择成功

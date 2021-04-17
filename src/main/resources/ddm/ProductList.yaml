@@ -1,0 +1,126 @@
+title:
+    - case_name: 验证商品列表功能
+testcase:
+    - element_info: /html/body/app-root/app-authorized/app-side-nav/div/div[1]/div/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击商品列表
+    - element_info: //*[@class='input ant-input ant-dropdown-trigger ng-untouched ng-pristine ng-valid ng-star-inserted'][@type='text'][@placeholder='品色号']
+      find_type: xpath
+      operate_type: send_keys
+      text: Auto2DontTouchMe
+      step: 点击并输入搜索内容
+    - element_info: //*[@id="body"]/nz-spin/div/app-list/article/div
+      find_type: xpath
+      operate_type: click
+      step: 移除光标搜索
+    - element_info: //*[@class='ant-table-row ng-star-inserted']/td[6]/a[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击查看文件
+    - element_info: //div[@class='ant-tabs-nav ant-tabs-nav-animated']/div[1]/div[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击原片
+    - element_info: //*[@id="body"]/nz-spin/div/app-file-list/article/header/div/app-td-input/nz-input-group/input
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoTesting
+      step: 输入内容搜索
+    - element_info: .ant-input-affix-wrapper svg
+      find_type: cssSelector
+      operate_type: click
+      step: 点击搜索
+    - element_info: //div[@class='ant-tabs-nav ant-tabs-nav-animated']/div[1]/div[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击原片
+    - element_info: //div[@class='typed-files']/app-smaller-file-item[1]//img[@class='img ng-star-inserted']
+      find_type: xpath
+      operate_type: click
+      step: 点击第一张图重命名
+    - element_info: //article/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击重命名
+    - element_info: //nz-input-group[@class='ant-input-affix-wrapper ng-star-inserted']/input[@type='text']
+      find_type: xpath
+      operate_type: send_keys
+      text: renameAutoUITesting
+      step: 输入重命名名称
+    - element_info: //div[@class='ant-modal-footer ng-star-inserted']/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: //div[@class='typed-files']/app-smaller-file-item[1]//img[@class='img ng-star-inserted']
+      find_type: xpath
+      operate_type: click
+      step: 点击第一张图设置标签
+    - element_info: //article/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击设置标签
+    - element_info: //*[@id="cdk-overlay-1"]/nz-modal/div/div[2]/div/div/div[2]/app-tags-file/div/section[2]/nz-date-picker/nz-picker/span/input
+      find_type: xpath
+      operate_type: click
+      step: 点击日期
+    - element_info: //today-button[@class='ng-star-inserted']/a[@role='button']
+      find_type: xpath
+      operate_type: click
+      step: 点击今天
+    - element_info: //div[@class='ant-modal-footer ng-star-inserted']/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: //div[@class='typed-files']/app-smaller-file-item[1]//img[@class='img ng-star-inserted']
+      find_type: xpath
+      operate_type: click
+      step: 点击第一张图下载
+    - element_info: //article/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击下载
+    - element_info: //div[@class='typed-files']/app-smaller-file-item[2]//img[@class='img ng-star-inserted']
+      find_type: xpath
+      operate_type: click
+      step: 点击第二张图删除
+    - element_info: //article/button[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //div[@class='ant-modal-confirm-btns']/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击取消
+    - element_info: //article/button[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //div[@class='ant-modal-confirm-btns']/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: //div[@class='typed-files']/app-smaller-file-item[2]//img[@class='img ng-star-inserted']
+      find_type: xpath
+      operate_type: click
+      step: 点击第二张图设置标签
+    - element_info: //article/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击设置标签
+    - element_info: //app-tags-file[@class='ng-star-inserted']/div/section[1]/nz-select/div/div[@class='ant-select-selection__rendered']
+      find_type: xpath
+      operate_type: click
+      step: 点击文件类型
+    - element_info: ul[role='menu'] > li:nth-of-type(2)
+      find_type: cssSelector
+      operate_type: click
+      step: 点击冲片
+    - element_info: //div[@class='ant-modal-footer ng-star-inserted']/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+      - element_info: //span[@class='folder-name']
+        text: AutoTesting006DontTouchMe文件列表
+        find_type: xpath

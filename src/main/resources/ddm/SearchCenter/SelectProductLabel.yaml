@@ -1,0 +1,46 @@
+title:
+    - case_name: 验证商品标签搜索功能
+testcase:
+    - element_info: //*[contains(@class, 'more')]
+      find_type: xpath
+      operate_type: click
+      step: 点击更多筛选
+    - element_info: //*[contains(@class, 'more-filter')]/nz-skeleton/div/span/app-visual-tags/div/app-mulselect-cascade/a
+      find_type: xpath
+      operate_type: click
+      step: 点击上衣（内搭）
+ #   - element_info: //*[contains(@class, 'parent-labels')]/li[2]/label/span/input
+ #     find_type: xpath
+ #     operate_type: click
+ #     step: 点击选择衬衫
+#    - element_info: .cdk-overlay-connected-position-bounding-box
+#      find_type: cssSelector
+##      operate_type: hiden
+ #     step: 点击全部
+#    - element_info: //*[contains(@class, 'more-filter')]/nz-skeleton/div/span/app-visual-tags/div/app-mulselect-cascade/a
+#      find_type: xpath
+#      operate_type: over_click
+#      step: 点击品类选择
+#    - element_info: //*[contains(@class, 'more-filter')]/nz-skeleton[2]/div/span/app-visual-tags/div/app-mulselect-cascade/a
+#      find_type: xpath
+#      operate_type: over_click
+#      step: 点击选择版型轮廓
+#    - element_info: //span[text()='版型']
+#      find_type: xpath
+#      operate_type: over_click
+#      step: 点击选择版型
+#    - element_info: //*[contains(@class, 'children-labels')]/label[3]
+#      find_type: xpath
+#      operate_type: over_click
+#      step: 点击选择合身
+#    - element_info: //*[contains(@class, 'more-filter')]/nz-skeleton[2]/div/span/app-visual-tags/div/app-mulselect-cascade/a
+#      find_type: xpath
+#      operate_type: over_click
+#      step: 点击全部
+#    - element_info: //*[contains(@class, 'more-filter')]/nz-skeleton[2]/div/span/app-visual-tags/div/app-mulselect-cascade/a
+#      find_type: xpath
+#      operate_type: over_click
+#      step: 点击视觉标签
+check:
+      - element_info: //*[contains(@class, 'picture-box')]
+        find_type: xpath

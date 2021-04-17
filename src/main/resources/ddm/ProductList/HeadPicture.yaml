@@ -1,0 +1,120 @@
+title:
+  - case_name: 验证商品列表头图选片
+testcase:
+  - element_info: /html/body/app-root/app-authorized/app-side-nav/div/div[1]/div/ul/li[2]
+    find_type: xpath
+    operate_type: click
+    step: 点击商品列表
+  - element_info: //*[@class='input ant-input ant-dropdown-trigger ng-untouched ng-pristine ng-valid ng-star-inserted'][@type='text'][@placeholder='品色号']
+    find_type: xpath
+    operate_type: send_keys
+    text: AutoTest
+    step: 点击并输入搜索内容
+  - element_info: //*[@id="body"]/nz-spin/div/app-list/article/div
+    find_type: xpath
+    operate_type: click
+    step: 移除光标搜索
+  - element_info: //*[@id="body"]/nz-spin/div/app-list/article/perfect-scrollbar/div/div[1]/nz-spin/div/nz-table/nz-spin/div/div/div/div/table/thead/tr/th[1]/span/div/span/label/span[1]/input
+    find_type: xpath
+    operate_type: click
+    step: 点击全选
+  - element_info: //div[@id='body']/nz-spin[@class='ant-spin-nested-loading']//app-list[@class='ng-star-inserted']/article[@class='material-list']//app-operation-list/div/button[1]
+    find_type: xpath
+    operate_type: click
+    step: 点击选片
+  - element_info: li:nth-of-type(2) > .ant-btn.ant-btn-block.ant-btn-link
+    find_type: cssSelector
+    operate_type: click
+    step: 点击头图选片
+  - element_info: //*[@class='ant-btn ant-btn-primary']
+    find_type: xpath
+    operate_type: click
+    step: 点击继续
+  #    - element_info: //nz-input-group[@class='ant-dropdown-trigger ant-input-affix-wrapper']/input[@placeholder='请选择平台店铺']
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击第一张图片选择店铺
+  #    - element_info: //span[.='天猫']
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击选中天猫店铺
+  #    - element_info: //span[.='淘宝']
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击选中淘宝店铺
+  #    - element_info: /html/body/div[2]/div[7]
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击第一张图片选择店铺
+  - element_info: //*[@id="body"]/nz-spin/div/app-head-image-selection/div/app-selection-header/div/div[3]/div[1]
+    find_type: xpath
+    operate_type: click
+    step: 点击保存
+  - element_info: //*[contains(@class, 'share-download')]/button[1]
+    find_type: xpath
+    operate_type: click
+    step: 点击下载头图选片
+  - element_info: //div[@class='ant-modal-confirm-btns']/button[1]
+    find_type: xpath
+    operate_type: click
+    step: 点击下载头图选片-取消按钮
+  - element_info: //*[contains(@class, 'share-download')]/button[1]
+    find_type: xpath
+    operate_type: click
+    step: 点击下载头图选片
+  - element_info: //div[@class='ant-modal-confirm-btns']/button[2]
+    find_type: xpath
+    operate_type: click
+    step: 点击下载头图选片-确认按钮
+  - element_info: //*[contains(@class, 'share-download')]/button[2]
+    find_type: xpath
+    operate_type: click
+    step: 点击分享头图选片按钮
+  - element_info: //div[@class='before-created ng-star-inserted']/div[@class='footer']/div//a[@class='preview']
+    find_type: xpath
+    operate_type: click
+    step: 点击预览头图按钮
+  #    - element_info: //*[@id="body"]/nz-spin/div/app-head-image-preview/div/div[1]/div/div[2]/div[1]/div[2]/img
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击第一张预览图
+  #    - element_info: [nzheight] [d]
+  #      find_type: cssSelector
+  #      operate_type: click
+  #      step: 点击关闭按钮 //*[@id="body"]/nz-spin/div/app-head-image-preview/div/div[1]/div/div[2]/div[1]/div[2]/div
+  #    - element_info: //*[@id="body"]/nz-spin/div/app-head-image-preview/div/div[1]/div/div[2]/div[1]/div[2]/div
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击第一张图查看店铺按钮
+  #    - element_info: //*[@class='main-image-preview-close']
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击关闭按钮退出店铺预览
+
+  #    - element_info: //*[contains(@class, 'main-image-preview-close')]//*[contains(@class, 'anticon')]
+  #      find_type: xpath
+  #      operate_type: click
+  #      step: 点击关闭按钮退出预览头图页面
+  - element_info: //div[@class='footer']/div/div[@class='ant-col ant-col-4']/button[@class='ant-btn ant-btn-primary']
+    find_type: xpath
+    operate_type: click
+    step: 点击创建分享链接
+  - element_info: //div[@class='created ng-star-inserted']/div[2]/div[@class='ant-col ant-col-4 ant-col-offset-12']/button[@class='ant-btn ant-btn-primary']
+    find_type: xpath
+    operate_type: click
+    step: 点击一键复制
+  - element_info: .share [d]
+    find_type: cssSelector
+    operate_type: click
+    step: 点击关闭分享弹窗
+  - element_info: //div[.='退出']
+    find_type: xpath
+    operate_type: click
+    step: 点击退出
+  - element_info: //*[@data-icon='poweroff']
+    find_type: xpath
+    operate_type: click
+    step: 点击退出图档
+check:
+  - element_info: //*[@type='text']
+    find_type: xpath

@@ -1,0 +1,39 @@
+title:
+    - case_name: 验证图片重命名功能
+testcase:
+    - element_info: //*[contains(@class, 'update-info-modal')]//*[@aria-label='Close']
+      find_type: xpath
+      operate_type: click
+      step: 隐藏上传记录
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28']
+      find_type: xpath
+      operate_type: click
+      step: 点击年度-2020
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28.a307bce1b4034be78c2874e7434461d9']
+      find_type: xpath
+      operate_type: click
+      step: 点击季节-春夏
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28.a307bce1b4034be78c2874e7434461d9.b05a49ae5cb34d33b1c813df8212ce74.021bc496341a448e8f537b61a691ace6']
+      find_type: xpath
+      operate_type: click
+      step: 点击品色号-AutoTesting001UIDontTouch
+    - element_info: //*[contains(@class, 'img-container')]
+      find_type: xpath
+      operate_type: click
+      step: 选中图片
+    - element_info: //*[contains(@class, 'ops-btns')]/button[6]
+      find_type: xpath
+      operate_type: click
+      step: 点击重命名
+    - element_info:  //*[contains(@class, 'ant-input-affix-wrapper')]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoRenamePicture
+      step: 重命名文件
+    - element_info: //*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+      - element_info: //div[text()='上传记录']
+        find_type: xpath

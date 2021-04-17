@@ -1,0 +1,56 @@
+title:
+    - case_name: 检查批量导入-EXCEL模板创建、下载、删除功能是否正常
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击"产品素材"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[1]/div/div/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"批量导入"
+      frame: MainBoard
+    - element_info: /html/body/div[1]/form/div[1]/ul/div[4]/li[3]/b/a
+      find_type: xpath
+      operate_type: click
+      step: 点击"去下载"
+    - element_info: (//td[@class='td2']//a)[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击"下载"按钮
+    - element_info: (//a[@class='a1 mgr20'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"删除"按钮
+    - element_info: (//button[text()='确认'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"确认"按钮
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"OK"按钮
+    - element_info: //*[@id="tradedownBtn"]
+      find_type: xpath
+      operate_type: click
+      step: 点击"选择模板"
+    - element_info: (//li[@name='trade'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"女装"类目
+    - element_info: (//ul[@class='trade-tree']//li)[5]
+      find_type: xpath
+      operate_type: click
+      step: 点击"衬衫(短)"类目
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"按钮
+    - element_info: (//button[text()='确认'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"确定"按钮
+check:
+      - element_info: //span[text()='模板下载中']
+        find_type: xpath
+        step: 检查"模板下载中"状态是否存在

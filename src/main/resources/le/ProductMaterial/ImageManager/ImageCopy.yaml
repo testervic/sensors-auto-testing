@@ -1,0 +1,97 @@
+title:
+  - case_name: 单张复制
+testcase:
+  - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+    find_type: xpath
+    operate_type: click
+    step: 点击"产品素材"
+  - element_info: //a[@href='/authorized/merchant/product']
+    find_type: xpath
+    operate_type: click
+    frame: MainBoard
+    step: 点击"综合列表"
+  - element_info: /html//input[@id='searchKeyword']
+    find_type: xpath
+    operate_type: send_keys
+    text: 20191112lzytest
+    step: 输入货号
+  - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+    find_type: xpath
+    operate_type: click
+    step: 点击"搜索"
+  - element_info: /html/body/div[2]/div[2]/table/tbody/tr/td[4]/div/a[4]
+    find_type: xpath
+    operate_type: click
+    step: 点击"图片"
+  - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[23]/p
+    find_type: xpath
+    operate_type: move_to
+    step: 鼠标hover图片
+  - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[23]/span/a[3]
+    find_type: xpath
+    operate_type: click
+    step: 点击单张复制
+  - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[24]/p
+    find_type: xpath
+    operate_type: move_to
+    step: 鼠标hover复制出的图片
+  - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[24]/span/a[4]
+    find_type: xpath
+    operate_type: click
+    step: 删除复制出来的图片
+  - element_info: /html/body/div[23]/div/div/div[2]/button[1]
+    find_type: xpath
+    operate_type: click
+    step: 确认删除
+  - element_info: /html/body/div[1]/div[2]/dl/dd[1]/span/h6
+    find_type: xpath
+    operate_type: click
+    step: 点击左侧天猫资源图
+  - element_info: //*[@id="span_naviMenu__COLOR__TMALL__div"]
+    find_type: xpath
+    operate_type: click
+    step: 点击天猫颜色图
+  - element_info: //span[@id='pictureCountCOLOR__TMALL']/following-sibling::img[1]
+    find_type: xpath
+    operate_type: click
+    step: 点击天猫颜色图一键复制到其他平台
+  - element_info: /html/body/div[23]/div/div/div/div/div/div[3]/span[1]
+    find_type: xpath
+    operate_type: click
+    step: 确定复制到考拉平台
+  - element_info: /html/body/div[1]/div[2]/dl/dd[5]/span/h6
+    find_type: xpath
+    operate_type: click
+    step: 点击左侧考拉资源图
+  - element_info: //*[@id="span_naviMenu__COLOR__KAOLA__div"]
+    find_type: xpath
+    operate_type: click
+    step: 点击考拉颜色图
+  - element_info: /html/body/div[1]/div[1]/form/div[37]/div[2]/ul/li[1]/p
+    find_type: xpath
+    operate_type: move_to
+    step: 鼠标hover图片
+  - element_info: /html/body/div[1]/div[1]/form/div[37]/div[2]/ul/li[1]/span/a[3]
+    find_type: xpath
+    operate_type: click
+    step: 通过删除验证是否有图
+  - element_info: /html/body/div[23]/div/div/div[2]/button[1]
+    find_type: xpath
+    operate_type: click
+    step: 确认删除
+  - element_info: /html/body/div[1]/div[1]/form/div[37]/div[2]/ul/li[2]/p
+    find_type: xpath
+    operate_type: move_to
+    step: 鼠标hover图片
+  - element_info: /html/body/div[1]/div[1]/form/div[37]/div[2]/ul/li[2]/span/a[3]
+    find_type: xpath
+    operate_type: click
+    step: 通过删除验证是否有图
+  - element_info: /html/body/div[23]/div/div/div[2]/button[1]
+    find_type: xpath
+    operate_type: click
+    step: 确认删除
+check:
+  - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[23]/span/a[3]
+    find_type: xpath
+    step: 检查是否成功删除

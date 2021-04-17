@@ -1,0 +1,89 @@
+title:
+    - case_name: 自定义Excel模板-创建
+testcase:
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/nz-table/nz-spin/div/div/div/div/table/tbody/tr[1]/td[3]/nz-select/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【请选择数据类型】
+    - element_info: /html/body/div/div[6]/div/div/div/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【SPU数据】
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/nz-table/nz-spin/div/div/div/div/table/tbody/tr[2]/td[3]/nz-select/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【请选择数据类型】
+    - element_info: /html/body/div/div[6]/div/div/div/ul/li[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【SPU数据】
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/nz-table/nz-spin/div/div/div/div/table/tbody/tr[1]/td[1]/label/span[1]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/nz-table/nz-spin/div/div/div/div/table/tbody/tr[2]/td[1]/label/span[1]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[3]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-field-settings/nz-spin/div/div[1]/nz-table/nz-spin/div/div/div/div/div[2]/table/tbody/tr[1]/td[6]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【字段匹配】
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-下拉框
+    - element_info: /html/body/div/div[5]/div/div/div/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【SPU-货号】
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[3]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-field-settings/nz-spin/div/div[1]/div[2]/nz-radio-group/label[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【SKU】
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-field-settings/nz-spin/div/div[1]/nz-table/nz-spin/div/div/div/div/div[2]/table/tbody/tr[1]/td[6]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【字段匹配】
+    - element_info:  /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-下拉框
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item[2]/nz-form-control/div/span/nz-select/div/div/div/div/input
+      find_type: xpath
+      operate_type: send_keys
+      text: 货号
+      step: 输入"货号"
+    - element_info: /html/body/div/div[5]/div/div/div/ul/li
+      find_type: xpath
+      operate_type: click
+      step: 点击-【SKU-货号】
+    - element_info: /html/body/div/div[2]/div/nz-modal/div/div[2]/div/div/div[3]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-field-settings/nz-spin/div/div[2]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【下一步】
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-template-settings/div/div[1]/form[1]/nz-form-item/nz-form-control/div/span/input
+      find_type: xpath
+      operate_type: send_keys
+      text: SQCustomExcelTemplate
+      step: 输入"SQCustomExcelTemplate"
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-creation/div/div[2]/app-step-template-settings/div/div[2]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【创建模板】
+check:
+      - element_info: //span[text() = '(4)']
+        find_type: xpath
+        step: 检查是否创建模板成功

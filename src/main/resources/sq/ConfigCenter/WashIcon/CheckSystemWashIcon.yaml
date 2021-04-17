@@ -1,0 +1,31 @@
+title:
+    - case_name: 检查系统洗涤图标
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'second-navs')]/li[2]/ul/li
+      find_type: xpath
+      operate_type: click
+      step: 点击-【洗涤图标】
+    - element_info: //a[text()='系统默认']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【系统默认】
+check:
+      - element_info: //header[text()='洗涤图标']
+        find_type: xpath
+        step: 检查是否洗涤图标页面
+      - element_info: //td[text()='系统配置-白色']
+        find_type: xpath
+        step: 检查是否洗涤图标页面
+      - element_info: //td[text()='系统配置-灰色']
+        find_type: xpath
+        step: 检查是否洗涤图标页面
+      - element_info: //td[text()='系统配置-灰色系']
+        find_type: xpath
+        step: 检查是否洗涤图标页面
+      - element_info: //td[text()='系统配置-黑色系']
+        find_type: xpath
+        step: 检查是否洗涤图标页面

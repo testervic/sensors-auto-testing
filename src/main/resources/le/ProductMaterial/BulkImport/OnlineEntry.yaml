@@ -1,0 +1,244 @@
+title:
+    - case_name: 检查在线录入功能
+testcase:
+    - element_info: //span[text()='提交']
+      find_type: xpath
+      operate_type: click
+      step: 点击"提交"按钮
+    - element_info: //a[@href='#sale']
+      find_type: xpath
+      operate_type: click
+      wait_time: 5000
+      step: 点击"销售属性"按钮
+    - element_info: //a[@href='#sale']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动
+    - element_info: //*[@id="field27021_20351_44436_29090"]
+      find_type: xpath
+      operate_type: click
+      step: 点击上市时间
+    - element_info: (//span[text()='十一月'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 选择"月份"
+    - element_info: //table[@id='skuContainer']/tbody[1]/tr[1]/td[8]/span[2]/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击齿轮
+    - element_info: /html/body/div[2]/form/div[1]/div[2]/ul/li[5]/b/div[1]/div/table/tbody/tr[1]/td[8]/span[2]/ul/li[3]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击一键填充
+    - element_info: //div[text()[normalize-space()='通用字段']]
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 找到通用字段向上滑动
+    - element_info: (//input[@data-text='是'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"是"
+    - element_info: (//input[@data-field-name='材质'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: PU
+      step: 点击"材质"输入内容
+    - element_info: (//input[@data-field-name='面料'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 亚麻
+      step: 点击"面料"输入内容
+#    - element_info: //input[@placeholder='面料']
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: 亚麻
+#      step: 点击"展示面料"输入内容
+#    - element_info: (//input[@placeholder='含量'])[1]
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: 100
+#      step: 点击"含量"输入内容
+#    - element_info: (//button[text()='设置'])[1]
+#      find_type: xpath
+#      operate_type: sliding_up
+#      step: 找到"详情页面料"向上滑动
+    - element_info: (//input[@data-field-name='版型'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 修身
+      step: 点击"版型"输入内容
+    - element_info: (//input[@data-field-name='淘宝天猫风格'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 甜美
+      step: 点击"淘宝天猫风格"输入内容
+    - element_info: (//button[@type='button'])[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击设置
+    - element_info: //input[@data-text='韩系']
+      find_type: xpath
+      operate_type: click
+      step: 点击韩系
+    - element_info: (//button[text()='确定'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: (//input[@data-field-name='淘宝天猫风格'])[1]
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 找到"淘宝天猫风格"向上滑动
+    - element_info: (//button[text()='设置'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击设置流行元素
+    - element_info: //input[@data-text='飘带']
+      find_type: xpath
+      operate_type: click
+      step: 点击飘带
+    - element_info: (//button[text()='确定'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: //em[text()='服装款式细节(多选) ']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 找到"服装款式细节(多选)"向上滑动
+    - element_info: (//button[text()='设置'])[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击设置流行元素
+    - element_info: (//input[@data-option='迷彩'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击迷彩
+    - element_info: (//button[text()='确定'])[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: (//input[@data-field-name='上市时间'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 2020年秋季
+      step: 点击"上市时间"输入内容
+    - element_info: (//input[@data-field-name='上市时间'])[1]
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 找到"材质"向上滑动
+    - element_info: //em[text()='宝贝卖点 ']
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 找到"宝贝卖点"向上滑动
+    - element_info: //input[@data-text='长袖衬衫']
+      find_type: xpath
+      operate_type: click
+      step: 点击长袖衬衫
+    - element_info: //input[@placeholder='材质']
+      find_type: xpath
+      operate_type: send_keys
+      text: PU
+      step: 点击材质
+    - element_info: //div[text()[normalize-space()='京东']]
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 找到"京东"向上滑动
+    - element_info: //div[text()[normalize-space()='唯品会']]
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 找到"唯品会"向上滑动
+    - element_info: //div[text()[normalize-space()='唯品会']]
+      find_type: xpath
+      operate_type: sliding_up
+      step: 找到"唯品会"向上滑动1
+    - element_info: (//li[@data-field-id='33111']//button)[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击设置
+    - element_info: //input[@data-option='麻混纺']
+      find_type: xpath
+      operate_type: click
+      step: 点击麻混纺
+    - element_info: /html/body/div[2]/form/div[1]/div[4]/div[5]/ul/li[6]/b/div/div/div/div[3]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: /html/body/div[2]/form/div[1]/div[4]/div[5]/ul/li[6]/b/button
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 上滑
+    - element_info: (//input[@data-field-name='弹性'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 微弹
+      step: 点击材质
+    - element_info: (//input[@data-field-name='厚薄'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 加厚
+      step: 点击材质
+    - element_info: (//input[@data-field-name='厚薄'])[1]
+      find_type: xpath
+      operate_type: sliding_up_800
+      step: 上滑
+    - element_info: /html/body/div[2]/form/div[1]/div[4]/div[5]/ul/li[20]/b/button
+      find_type: xpath
+      operate_type: click
+      step: 点击设置
+    - element_info: //input[@data-text='秋']
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: /html/body/div[2]/form/div[1]/div[4]/div[5]/ul/li[20]/b/div/div/div/div[3]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: /html/body/div[2]/form/div[1]/div[4]/div[5]/ul/li[21]/b/button
+      find_type: xpath
+      operate_type: click
+      step: 点击设置
+    - element_info: //input[@data-text='男士']
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: /html/body/div[2]/form/div[1]/div[4]/div[5]/ul/li[21]/b/div/div/div/div[3]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: //span[text()='提交产品']
+      find_type: xpath
+      operate_type: click
+      step: 点击'提交产品'
+    - element_info: /html/body/div[9]/div/div/div[1]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击'关闭'
+#    - element_info: //button[text()='OK']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击'OK'
+    - element_info: //input[@placeholder='货号、品名或备注']
+      find_type: xpath
+      operate_type: send_keys
+      text: OnlineEntry
+      wait_time: 3000
+      step: 输入内容
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索
+    - element_info: (//input[@type='checkbox'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 勾选第一个商品
+    - element_info: //span[text()='删除']
+      find_type: xpath
+      operate_type: click
+      step: 点击"删除"
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击"确认"
+check:
+      - element_info: //div[text()='产品已成功删除']
+        find_type: xpath
+        step: 检查"提交的产品"是否删除

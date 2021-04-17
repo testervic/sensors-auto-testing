@@ -1,0 +1,46 @@
+title:
+    - case_name: 编辑工作台-生成详情页
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div[2]/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑工作台】
+    - wait_time: 2000
+      switch_window: 1
+      element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestAddLink
+      step: 搜索"AutoUITestAddLink"
+    - element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: ENTER
+      step: 回车执行搜索
+    - element_info: //div[text()='考拉']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【考拉链接】
+    - element_info: //*[@title='删除链接']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【删除链接】
+    - element_info: //*[contains(@class, 'ant-modal-confirm-btns')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+    - element_info: //*[contains(@class, 'ant-modal-confirm-btns')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+
+check:
+      - element_info: //div[text()='淘宝']
+        find_type: xpath
+        step: 确认只删除了新增的考拉链接
+      - element_info: //*[contains(@class, 'text-title')]
+        find_type: xpath
+        step: 检查是否在编辑工作台

@@ -1,0 +1,79 @@
+title:
+    - case_name: 检查系统测量示意图
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'second-navs')]/li[2]/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【测量示意图】
+    - element_info: //a[text()='系统默认']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【系统默认】
+check:
+      - element_info: //header[text()='测量示意图']
+        find_type: xpath
+        step: 检查是否测量示意图页面
+      - element_info: //td[text()='1']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"1"
+      - element_info: //td[text()='2']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"2"
+      - element_info: //td[text()='3']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"3"
+      - element_info: //td[text()='4']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"4"
+      - element_info: //td[text()='5']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"5"
+      - element_info: //td[text()='6']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"6"
+      - element_info: //td[text()='7']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"7"
+      - element_info: //td[text()='8']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"8"
+      - element_info: //td[text()='9']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"9"
+      - element_info: //td[text()='10']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"10"
+      - element_info: //td[text()='11']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"11"
+      - element_info: //td[text()='12']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"12"
+      - element_info: //td[text()='13']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"13"
+      - element_info: //td[text()='14']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"14"
+      - element_info: //td[text()='15']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"15"
+      - element_info: //td[text()='16']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"16"
+      - element_info: //td[text()='17']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"17"
+      - element_info: //td[text()='18']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"18"
+      - element_info: //td[text()='19']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"19"
+      - element_info: //td[text()='20']
+        find_type: xpath
+        step: 检查是否存在系统测量示意图"20"

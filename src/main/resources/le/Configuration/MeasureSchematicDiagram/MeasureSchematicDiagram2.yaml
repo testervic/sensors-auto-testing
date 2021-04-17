@@ -1,0 +1,41 @@
+title:
+    - case_name: 配置-测量示意图
+testcase:
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: /html/body/div[1]/div[2]/div/div/table/tbody/tr[10]/td[5]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: //li[text()='大码女装雪纺衫']
+      find_type: xpath
+      operate_type: click
+      step: 选择大码女装雪纺衫
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: /html/body/div[1]/div[2]/div/div/table/tbody/tr[10]/td[5]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认
+
+
+check:
+    - element_info: //span[text()='测量示意图']
+      find_type: xpath
+      step: 检查是否删除成功

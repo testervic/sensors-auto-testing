@@ -1,0 +1,50 @@
+title:
+    - case_name: 检查首页元素是否存在
+testcase:
+    - element_info: //*[contains(@class, 'title')]
+      find_type: xpath
+      operate_type: click
+      step: 点击首页logo
+check:
+    - element_info: //*[contains(@class, 'customer-service')]
+      find_type: xpath
+      step: 检查"客服"元素是否存在
+    - element_info: //*[contains(@class, 'anticon-question-circle')]
+      find_type: xpath
+      step: 检查"帮助"元素是否存在
+    - element_info: //*[contains(@class, 'ant-dropdown-trigger')]
+      find_type: xpath
+      step: 检查"账号信息"元素是否存在
+    - element_info: //*[contains(@class, 'anticon-poweroff')]
+      find_type: xpath
+      step: 检查"开关"元素是否存在
+    - element_info: //*[contains(@class, 'navs')]/ul/li/a
+      find_type: xpath
+      step: 检查"商品管理"元素是否存在
+    - element_info: //*[contains(@class, 'navs')]/ul/li[2]/a
+      find_type: xpath
+      step: 检查"上货管理"元素是否存在
+    - element_info: //*[contains(@class, 'navs')]/ul/li[3]/a
+      find_type: xpath
+      step: 检查"模板管理"元素是否存在
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]/a
+      find_type: xpath
+      step: 检查"配置管理"元素是否存在
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      step: 检查"上货工作台"元素是否存在
+    - element_info: //*[contains(@class, 'statistics-items')]/article
+      find_type: xpath
+      step: 检查"录入商品"元素是否存在
+    - element_info: //*[contains(@class, 'statistics-items')]/article[2]
+      find_type: xpath
+      step: 检查"录入素材图"元素是否存在
+    - element_info: //*[contains(@class, 'statistics-items')]/article[3]
+      find_type: xpath
+      step: 检查"生成详情页"元素是否存在
+    - element_info: //*[contains(@class, 'statistics-items')]/article[4]
+      find_type: xpath
+      step: 检查"铺货成功"元素是否存在
+    - element_info: //*[contains(@class, 'statistics-items')]/article[5]
+      find_type: xpath
+      step: 检查"平均上货耗时"元素是否存在

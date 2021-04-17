@@ -1,0 +1,149 @@
+title:
+    - case_name: 配置-规则配置-产品标题生成配置
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/exchangeConfig']
+      find_type: xpath
+      operate_type: click
+      step: 点击"规则配置"
+      frame: MainBoard
+    - element_info: //span[text()='产品标题生成配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击产品标题生成配置
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="name"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 输入产品标题生成配置名称
+    - element_info: //*[@id="wordGroupName"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 输入新词组
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: /html/body/div/div[2]/form/ul/li[5]/b/div/span[7]
+      find_type: xpath
+      operate_type: move_to
+      step: 移动至新增词组
+    - element_info: /html/body/div[1]/div[2]/form/ul/li[5]/b/div/span[7]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击删除新增词组
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 确认删除
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: //*[@id="wordGroupName"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 再次输入新词组
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="wordGroupContainer"]
+      find_type: xpath
+      operate_type: click
+      step: 点击下拉框
+    - element_info: /html/body/div[1]/div[2]/form/ul/li[3]/b/div/ul[2]/li[1]/ul/li[7]/a
+      find_type: xpath
+      operate_type: click
+      step: 选择新词组
+    - element_info: //*[@id="wordGroupContainer"]
+      find_type: xpath
+      operate_type: click
+      step: 点击下拉框
+    - element_info: /html/body/div[1]/div[2]/form/ul/li[3]/b/div/ul[2]/li[2]/a
+      find_type: xpath
+      operate_type: click
+      step: 选择货号
+    - element_info: //span[text()='提交']
+      find_type: xpath
+      operate_type: click
+      step: 点击提交
+    - element_info: (//a[text()[normalize-space()='已启用']])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击禁用
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: //a[text()[normalize-space()='已禁用']]
+      find_type: xpath
+      operate_type: click
+      step: 点击启用
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: /html/body/div[1]/div[2]/div[1]/table/tbody/tr[2]/td[5]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: /html/body/div[1]/div[2]/form/ul/li[3]/b/div/ul[1]/li[1]
+      find_type: xpath
+      operate_type: move_to
+      step: 移动至新增词组
+    - element_info: /html/body/div[1]/div[2]/form/ul/li[3]/b/div/ul[1]/li/a
+      find_type: xpath
+      operate_type: click
+      step: 从标题组成选择中删除新增的词组
+    - element_info: //span[text()='提交']
+      find_type: xpath
+      operate_type: click
+      step: 点击提交
+    - element_info: /html/body/div[1]/div[2]/div[1]/table/tbody/tr[2]/td[5]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 确认删除
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: /html/body/div[1]/div[2]/div[1]/table/tbody/tr[2]/td[5]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: /html/body/div/div[2]/form/ul/li[5]/b/div/span[7]
+      find_type: xpath
+      operate_type: move_to
+      step: 移动至新增词组
+    - element_info: /html/body/div[1]/div[2]/form/ul/li[5]/b/div/span[7]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击删除新增词组
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 确认删除
+
+
+check:
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      step: 检查是否删除成功

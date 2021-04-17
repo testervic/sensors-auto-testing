@@ -1,0 +1,25 @@
+title:
+    - case_name: 对上传成功的图片包清空
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseDetails']/span[.='详情页']
+      find_type: xpath
+      operate_type: click
+      step: 点击详情页
+    - element_info: //div[@id='collapseDetails']//a[@href='/authorized/merchant/product/visionResourceCreate']
+      find_type: xpath
+      operate_type: click
+      frame: MainBoard
+      step: 点击"自动排版"
+    - element_info: /html//input[@id='productKeyword']
+      find_type: xpath
+      operate_type: send_keys
+      text: 巡检商品Testing
+      step: 输入货号
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击"搜索"
+check:
+      - element_info: /html/body/div[2]/div[1]/div[2]/div[1]/span
+        find_type: xpath
+        step: 检查是否在搜索页面

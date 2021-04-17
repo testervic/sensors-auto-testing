@@ -1,0 +1,72 @@
+title:
+    - case_name: 检查字段录入销售属性字段是否存在
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击产品素材
+    - element_info: //div[@id='collapseProduct']//a[@href='/authorized/merchant/product/add/new']
+      find_type: xpath
+      operate_type: click
+      step: 点击字段录入
+      frame: MainBoard
+    - element_info: /html/body/div[2]/form/div[1]/div[1]/ul/li[2]/b/div/div/div[3]/ul/li/ul/li[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击女装分类
+    - element_info: //li[@data-name='半身裙']
+      find_type: xpath
+      operate_type: click
+      step: 点击半身裙
+    - element_info: code
+      find_type: id
+      operate_type: send_date_now
+      text: AutoUITesting
+      step: 输入货号
+    - element_info: title
+      find_type: id
+      operate_type: sliding_up
+      step: 向上滑动
+    - element_info: //body/div/ul//a[@href='#sale']
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击销售属性
+#    - element_info:
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击
+check:
+      - element_info: //body/div/ul//a[@href='#sale']
+        find_type: xpath
+        step: 检查颜色字段是否存在
+      - element_info: //input[@placeholder='选择标准色']
+        find_type: xpath
+        step: 检查颜色字段是否存在
+      - element_info: //span[text()='新增']
+        find_type: xpath
+        step: 检查颜色字段"新增"是否存在
+      - element_info: //label[text()[normalize-space()='自动计算']]
+        find_type: xpath
+        step: 检查"自动计算"是否存在
+      - element_info: //label[text()[normalize-space()='手动填写']]
+        find_type: xpath
+        step: 检查"手动填写"是否存在
+      - element_info: //form[@id='mainForm']/div[@class='form_container']/div/ul[@class='clear_float']/li[2]/em
+        find_type: xpath
+        step: 检查尺码字段是否存在
+      - element_info: //form[@id='mainForm']/div[@class='form_container']/div/ul[@class='clear_float']/li[3]/em
+        find_type: xpath
+        step: 检查尺码表字段是否存在
+      - element_info: (//span[text()='选择预填尺码数据'])[1]
+        find_type: xpath
+        step: 检查"选择预填尺码数据"字段是否存在
+      - element_info: //span[text()='选择文件']
+        find_type: xpath
+        step: 检查商家SKU"选择文件"是否存在
+      - element_info: //form[@id='mainForm']/div[@class='form_container']/div/ul[@class='clear_float']/li[5]/em
+        find_type: xpath
+        step: 检查商家SKU字段是否存在
+      - element_info: //span[text()='SKU导入']
+        find_type: xpath
+        step: 检查商家SKU"SKU导入"字段是否存在

@@ -1,0 +1,63 @@
+title:
+    - case_name: 资源图生成
+testcase:
+#    - element_info: //a[@href='#collapseDerivation']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"资源图"
+#    - element_info: //div[@id='collapseDerivation']/div[1]/a[1]
+#      find_type: xpath
+#      operate_type: click
+#      frame: MainBoard
+#      step: 点击"资源图生成"
+#    - element_info: //input[@placeholder='选择年度']
+#      find_type: xpath
+#      operate_type: move_to
+#      step: 移动鼠标到"年度"
+#    - element_info: //span[text()='2020年度']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"2020"
+#    - element_info: //input[@placeholder='选择期数']
+#      find_type: xpath
+#      operate_type: move_to
+#      wait_time: 2000
+#      step: 点击"选择期数"
+#    - element_info: //span[text()='2020-11-04']
+#      find_type: xpath
+#      operate_type: click
+#      step: 选择"2020-11-04"
+#    - element_info: (//input[@class='custom-checkbox'])[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 勾选第一个商品
+#    - element_info: //span[text()='生成资源图']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"生成资源图"
+    - element_info: //input[@value='TAOBAO']
+      find_type: xpath
+      operate_type: click
+      step: 勾选淘宝
+    - element_info: //input[@name='taobaoCkAll']
+      find_type: xpath
+      operate_type: click
+      step: 勾选淘宝全选
+    - element_info: (//button[text()='确定'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"确认"
+check:
+    - element_info: (//td[text()='AutoUITesting'])[1]
+      find_type: xpath
+      step: 验证货号为"AutoUITesting"
+    - element_info: (//span[text()='成功'])[1]
+      find_type: xpath
+      operate_type: getValue
+      text: 成功
+      wait_time: 25000
+      step: 检查资源图是否生成成功

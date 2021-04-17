@@ -1,0 +1,23 @@
+title:
+    - case_name: 智能抠图-(下)
+testcase:
+    - element_info: (//span[@class='ant-checkbox']//input)[1]
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击"全选"
+    - element_info: /html/body/app-root/app-matting/div/app-last-upload/div/div/app-matting-form/div/div[2]/div[2]/button
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击"开始抠图"
+#    - element_info: /html/body/app-root/app-matting/div/app-task-progress/div/app-matting-table/nz-table/nz-spin/div/div/div/div/div/table/tbody/tr[1]/td[9]/button[1]
+#      find_type: xpath
+#      operate_type: click
+#      wait_time: 15000
+#      step: 点击"预览"
+check:
+    - element_info: (//div[text()=' SmartCutout-AutoUITesting.jpg '])[1]
+      find_type: xpath
+      wait_time: 2000
+      step: 检查复制任务码

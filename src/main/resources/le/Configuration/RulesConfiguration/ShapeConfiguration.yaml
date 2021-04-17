@@ -1,0 +1,114 @@
+title:
+    - case_name: 配置-规则配置-号型配置
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/exchangeConfig']
+      find_type: xpath
+      operate_type: click
+      step: 点击"规则配置"
+      frame: MainBoard
+    - element_info: //span[text()='号型配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击号型配置
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="name"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 输入号型配置名称
+    - element_info: //span[text()='号型配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击使图标加载
+    - element_info: //li[text()='女装']
+      find_type: xpath
+      operate_type: click
+      step: 选择女装
+    - element_info: //li[text()='半身裙']
+      find_type: xpath
+      operate_type: click
+      step: 选择半身裙
+    - element_info: //span[text()='号型配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击使图标加载
+    - element_info: //button[text()='新增号型规则']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增一个号型规则
+    - element_info: (//input[@name='size'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: S
+      step: 输入第一个标准尺码值
+    - element_info: (//input[@name='model'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 37
+      step: 输入第一个号型值
+    - element_info: (//input[@name='size'])[2]
+      find_type: xpath
+      operate_type: send_keys
+      text: M
+      step: 输入第二个标准尺码值
+    - element_info: (//input[@name='model'])[2]
+      find_type: xpath
+      operate_type: send_keys
+      text: 38
+      step: 输入第二个号型值
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: (//font[text()='已启用'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 切换为禁用
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: //a[text()[normalize-space()='已禁用']]
+      find_type: xpath
+      operate_type: click
+      step: 切换为启用
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: /html/body/div[1]/div[2]/div[1]/table/tbody/tr[2]/td[6]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: (//div[@class='item']//a)[2]
+      find_type: xpath
+      operate_type: click
+      step: 删除第二个字段
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: /html/body/div[1]/div[2]/div[1]/table/tbody/tr[2]/td[6]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认
+
+check:
+    - element_info: (//span[text()='号型配置'])[1]
+      find_type: xpath
+      step: 检查是否删除成功

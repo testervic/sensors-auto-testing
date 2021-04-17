@@ -1,0 +1,16 @@
+title:
+    - case_name: Excel自定义模板上传
+testcase:
+    - element_info: /html/body/app-root/app-upload/div/app-upload-sku/div/nz-tabset/div[1]/div/div/div/div/div[1]/div[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【使用自定义模板】
+    - element_info: .ant-upload-select .ant-upload > input
+      find_type: cssSelector
+      operate_type: display
+      step: 显示隐藏的input元素
+check:
+      - wait_time: 5000
+        element_info: //*[contains(@class, 'active')]
+        find_type: xpath
+        step: 检查是否在上传Excel页面

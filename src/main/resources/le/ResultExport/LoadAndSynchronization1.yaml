@@ -1,0 +1,46 @@
+title:
+    - case_name: 检查上货功能是否正常(下)
+testcase:
+    - element_info: /html/body/div[3]/div/div/div[2]/div/div[2]/div[2]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"继续"按钮
+    - element_info: //*[@id="checkbox2404301"]
+      find_type: xpath
+      operate_type: click
+      switch_window: 1
+      step: 勾选商品
+    - element_info: /html/body/div[1]/div[2]/div[2]/div[2]/a/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击批量操作
+    - element_info: //a[@data-target='#batchFreightModal']
+      find_type: xpath
+      operate_type: click
+      step: 选中"运费模板"
+    - element_info: /html/body/div[7]/div/div/div[2]/div[2]/select/option[5]
+      find_type: xpath
+      operate_type: click
+      step: 选中国外
+    - element_info: (//button[text()='保存'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"保存"按钮
+    - element_info: //span[text()='匹配字段并上货']
+      find_type: xpath
+      operate_type: click
+      step: 点击"匹配字段并上货"按钮
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击"OK"按钮
+check:
+      - element_info: /html/body/div[2]/div/div[2]/div/table/tbody/tr[2]/td[9]/span[1]
+        operate_type: getValue
+        find_type: xpath
+        text: 上货成功
+        wait_time: 5000
+        step: 检查上货状态是否上货成功
+#      - element_info: //*[@id="distribute"]
+#        find_type: xpath
+#        step: 验证"匹配字段并上货"按钮

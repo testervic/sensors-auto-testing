@@ -1,0 +1,55 @@
+title:
+    - case_name: 检查详情页-在线微调
+testcase:
+    - element_info: //*[contains(@class, 'global_logo')]/a/img
+      find_type: xpath
+      operate_type: click
+      step: 点击首页logo
+    - element_info: //span[text()='详情页']
+      find_type: xpath
+      operate_type: click
+      step: 点击"详情页"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[2]/div/div/a[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击"在线微调"
+      frame: MainBoard
+    - element_info: //*[@id="searchKeyword"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 综合列表
+      step: 搜索商品
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击"搜索"按钮
+    - element_info: (//td[@class='td2']//a)[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击微调
+    - element_info: //*[@id="saveAll"]
+      find_type: xpath
+      operate_type: click
+      switch_window: 1
+      step: 点击"存储"按钮
+    - element_info: //button[@data-bb-handler='confirm']
+      find_type: xpath
+      operate_type: click
+      step: 点弹窗中确定按钮
+    - element_info: //button[@data-bb-handler='confirm']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认发布按钮
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击"OK"按钮
+    - element_info: //*[@id="previewAll"]
+      find_type: xpath
+      operate_type: click
+      step: 点击"预览"按钮
+check:
+    - element_info: //*[@id="showImg1"]
+      find_type: xpath
+      switch_window: 1
+      step: 检查预览页面

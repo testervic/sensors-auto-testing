@@ -1,0 +1,41 @@
+title:
+    - case_name: 配置-规则配置-其他规则
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/exchangeConfig']
+      find_type: xpath
+      operate_type: click
+      step: 点击"规则配置"
+      frame: MainBoard
+    - element_info: //span[text()='其他规则']
+      find_type: xpath
+      operate_type: click
+      step: 点击其他规则
+    - element_info: //a[text()[normalize-space()='已禁用']]
+      find_type: xpath
+      operate_type: click
+      step: 切换为启用
+    - element_info: (//a[@title='点击禁用'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 切换为禁用
+    - element_info: //span[text()='价格配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击价格配置
+    - element_info: //span[text()='其他规则']
+      find_type: xpath
+      operate_type: click
+      step: 点击其他规则
+
+check:
+    - element_info: //a[text()[normalize-space()='已禁用']]
+      find_type: xpath
+      step: 检查是否操作成功

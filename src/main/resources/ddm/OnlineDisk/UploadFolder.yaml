@@ -1,0 +1,78 @@
+title:
+    - case_name: 验证图片上传功能
+testcase:
+#    - element_info: //*[contains(@class, 'first-sider-nav')]/ul/li[3]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击素材网盘
+#    - element_info: //*[@id="cdk-overlay-7"]/nz-modal/div/div[2]/div/div/div/div/div[3]/a
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击我知道了
+        #    - element_info: /html/body/app-root/app-authorized/app-side-nav/div/div[2]/div[2]/nz-spin/div/app-ddm/div/nz-layout/nz-sider/div/perfect-scrollbar/div/div[1]/nz-collapse/div/nz-collapse-panel[1]/div[2]/div/app-product-manage-tree/nz-tree/ul/nz-tree-node[8]/li/span[2]/span/span/span
+        #    - element_info: //div[@id='body']/nz-spin[@class='ant-spin-nested-loading']//app-ddm[@class='ng-star-inserted']/div/nz-layout/nz-sider//perfect-scrollbar//div[@class='ant-collapse ant-collapse-borderless']/nz-collapse-panel[1]//app-product-manage-tree/nz-tree[@class='tree']/ul[@role='tree']/nz-tree-node[8]/li[@role='treeitem']/span[@class='ng-star-inserted']/span/span/span
+        #    - element_info: //nz-tree-node[8]/?/?/span[@safeclass~'\bant-tree-switcher\b.*\bng-star-inserted\b']/i[@safeclass~'\banticon\b.*\banticon-caret-down\b.*\bcaret\b.*\bng-star-inserted\b']/svg/path
+        #      find_type: xpath
+        #      operate_type: click
+        #      step: 点击品牌男生女生
+#    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击年度-2020
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28.a307bce1b4034be78c2874e7434461d9']
+      find_type: xpath
+      operate_type: click
+      step: 点击季节-春夏
+    - element_info: //*[contains(@class, 'hover-icon')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上传】
+    - element_info: /html/body/div/div[9]/div/div/div/app-upload/ul/li[1]/app-rapidly-upload/div/nz-upload/div/div/input
+      find_type: xpath
+      operate_type: send_keys
+#      text: D:\AutoUI-space\auto-testing\AutoUI\res\AutoTesting001UIDontTouch
+      text: /var/lib/jenkins/workspace/DDM.AutoUITest/AutoUI/res/AutoTesting001UIDontTouch
+      step: 上传文件夹
+    - element_info: /html/body/div/div[9]/div/nz-modal/div/div[2]/div/div/div[2]/app-set-tag-modal/div/perfect-scrollbar/div/div[1]/div/div[2]/formly-form/formly-field[1]/formly-form-field/nz-form-item/nz-form-control/div/span/dd-form-select/nz-select
+      find_type: xpath
+      operate_type: click
+      step: 点击文件类型
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择原片
+    - element_info: //*[contains(@class, 'footer')]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: //*[contains(@class, 'update-info-modal')]//*[@aria-label='Close']
+      find_type: xpath
+      operate_type: click
+      step: 隐藏上传记录
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28']
+      find_type: xpath
+      operate_type: click
+      step: 点击年度-2020
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28.a307bce1b4034be78c2874e7434461d9']
+      find_type: xpath
+      operate_type: click
+      step: 点击季节-春夏
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28.a307bce1b4034be78c2874e7434461d9.b05a49ae5cb34d33b1c813df8212ce74.021bc496341a448e8f537b61a691ace6']
+      find_type: xpath
+      operate_type: click
+      step: 点击品色号-AutoTesting001UIDontTouch
+    - element_info: //*[contains(@class, 'img-container')]
+      find_type: xpath
+      operate_type: click
+      step: 选中图片
+    - element_info: //*[contains(@class, 'ops-btns')]/button[8]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //*[contains(@class, 'ant-modal-confirm-btns')]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+      - element_info: //*[contains(@class, 'anticon-poweroff')]
+        find_type: xpath

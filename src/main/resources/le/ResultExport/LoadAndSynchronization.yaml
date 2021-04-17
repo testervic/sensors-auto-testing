@@ -1,0 +1,37 @@
+title:
+    - case_name: 检查上货功能是否正常(上)
+testcase:
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[8]/a/span[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击成果导出
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[8]/div/div/a[1]
+      find_type: xpath
+      operate_type: click
+      frame: MainBoard
+      step: 点击上货与同步
+    - element_info: //*[@id="searchKeyword"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 巡检商品Testing
+      step: 搜索商品
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索按钮//*[@id="product_id_2404301"]
+    - element_info: //*[@id="product_id_2404301"]
+      find_type: xpath
+      operate_type: click
+      step: 勾选商品
+    - element_info: /html/body/div[2]/div[2]/table/tbody/tr/td[7]/div/span
+      find_type: xpath
+      operate_type: click
+      step: 点击"上货"按钮
+#    - element_info: /html/body/div[3]/div/div/div[2]/div/div[2]/div[2]/button[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"继续"按钮
+check:
+      - element_info: /html/body/div[2]/div[2]/table/tbody/tr/td[7]/div/span
+        find_type: xpath
+        step: 检查上货字段是否存在

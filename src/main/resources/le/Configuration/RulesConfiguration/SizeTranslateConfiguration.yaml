@@ -1,0 +1,91 @@
+title:
+    - case_name: 配置-规则配置-尺码转义配置
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/exchangeConfig']
+      find_type: xpath
+      operate_type: click
+      step: 点击"规则配置"
+      frame: MainBoard
+    - element_info: //span[text()='尺码转义配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击尺码转义配置
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="name"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 输入尺码转义配置名称
+    - element_info: /html/body/div[1]/form/div/div[1]/label
+      find_type: xpath
+      operate_type: click
+      step: 点击使图标加载
+    - element_info: //button[text()='新增转义项']
+      find_type: xpath
+      operate_type: click
+      step: 新增一个
+    - element_info: (//input[@name='original'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: S
+      step: 输入第一个标准尺码值
+    - element_info: (//input[@name='expected'])[1]
+      find_type: xpath
+      operate_type: send_keys
+      text: 37
+      step: 输入第一个转义值
+    - element_info: (//input[@name='original'])[2]
+      find_type: xpath
+      operate_type: send_keys
+      text: M
+      step: 输入第二个标准尺码值
+    - element_info: (//input[@name='expected'])[2]
+      find_type: xpath
+      operate_type: send_keys
+      text: 38
+      step: 输入第二个转义值
+    - element_info: //button[text()='保 存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: (//a[@title='点击禁用'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 切换为禁用
+    - element_info: (//a[@title='点击启用'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 切换为启用
+    - element_info: /html/body/div[1]/div[2]/table/tbody/tr[1]/td[4]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击修改
+    - element_info: (//div[@class='item']//a)[2]
+      find_type: xpath
+      operate_type: click
+      step: 删除第二个字段
+    - element_info: //button[text()='保 存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: /html/body/div[1]/div[2]/table/tbody/tr[1]/td[4]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+
+
+check:
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      step: 检查是否删除成功

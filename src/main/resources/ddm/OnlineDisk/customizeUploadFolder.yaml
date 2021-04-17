@@ -1,0 +1,20 @@
+title:
+    - case_name: 验证图片上传功能
+testcase:
+    - element_info: //*[contains(@class, 'hover-icon')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上传】
+    - element_info: //*[contains(@class, 'customized-upload-folder')]//*[contains(@class, 'ant-upload-select')]/div/input
+      find_type: xpath
+      operate_type: send_keys
+#      text: D:\AutoUI-space\auto-testing\AutoUI\res\AutoTesting001UIDontTouch
+      text: /var/lib/jenkins/workspace/DDM.AutoUITest/AutoUI/res/AutoTesting001UIDontTouch
+      step: 上传AutoTesting001UIDontTouch
+    - element_info: //*[contains(@class, 'update-info-modal')]//*[@aria-label='Close']
+      find_type: xpath
+      operate_type: click
+      step: 隐藏上传记录
+check:
+      - element_info: //div[text()='上传记录']
+        find_type: xpath

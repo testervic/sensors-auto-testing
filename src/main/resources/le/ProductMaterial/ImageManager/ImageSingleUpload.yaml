@@ -1,0 +1,35 @@
+title:
+  - case_name: 单张上传
+testcase:
+  - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+    find_type: xpath
+    operate_type: click
+    step: 点击"产品素材"
+  - element_info: //a[@href='/authorized/merchant/product']
+    find_type: xpath
+    operate_type: click
+    frame: MainBoard
+    step: 点击"综合列表"
+  - element_info: /html//input[@id='searchKeyword']
+    find_type: xpath
+    operate_type: send_keys
+    text: 20191112lzytest
+    step: 输入货号
+  - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+    find_type: xpath
+    operate_type: click
+    step: 点击"搜索"
+  - element_info: /html/body/div[2]/div[2]/table/tbody/tr/td[4]/div/a[4]
+    find_type: xpath
+    operate_type: click
+    step: 点击"图片"
+  - element_info: /html/body/div[1]/div[1]/form/div[3]/div[2]/ul/li[4]/a
+    find_type: xpath
+    operate_type: click
+    step: 点击上传按钮
+
+
+check:
+  - element_info: /html/body/div[18]/div/div/div/div/div[1]/div[2]/div
+    find_type: xpath
+    step: 检查是否出现选择图片页面的关闭按钮

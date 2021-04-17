@@ -1,0 +1,68 @@
+title:
+    - case_name: 编辑工作台填写表单-系统Excel
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div[2]/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑工作台】
+    - wait_time: 2000
+      switch_window: 1
+      element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: SystemExcelAutoUpload
+      step: 搜索"SystemExcelAutoUpload"
+    - element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: ENTER
+      step: 回车执行搜索
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(2) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-select > nz-select
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【店铺】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu-item')]
+      find_type: xpath
+      operate_type: click
+      step: 选择店铺
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(7) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-select > nz-select
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【成分含量】
+    - element_info: .ant-select-dropdown-menu > li
+      find_type: cssSelector
+      operate_type: click
+      step: 选择-【31%-50%】
+    - element_info: .basis .ant-spin-container > formly-form > formly-field:nth-of-type(8) > formly-form-field > nz-form-item > nz-form-control > div > span > dd-form-select > nz-select
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【质地】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li
+      find_type: xpath
+      operate_type: click
+      step: 选择-【其他】
+    - element_info: //*[contains(@class, 'right-tools')]/i[1]
+      find_type: xpath
+      operate_type: over_click
+      step: 点击-【保存为草稿】
+    - element_info: //*[contains(@class, 'ant-checkbox-wrapper')]
+      find_type: xpath
+      operate_type: click
+      step: 鼠标点击-【空链接上货】
+    - element_info: //*[@title='保存链接']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【保存链接】
+    - element_info: //*[contains(@class, 'ant-tabs-extra-content')]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑完成】
+
+check:
+      - wait_time: 1000
+        element_info: //p[text()='该商品所有商品链接均完成编辑']
+        find_type: xpath
+        step: 检查是否编辑完成

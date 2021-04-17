@@ -1,0 +1,114 @@
+title:
+  - case_name: 画图
+testcase:
+  - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+    find_type: xpath
+    operate_type: click
+    step: 点击"产品素材"
+  - element_info: //a[@href='/authorized/merchant/product']
+    find_type: xpath
+    operate_type: click
+    frame: MainBoard
+    step: 点击"综合列表"
+  - element_info: /html//input[@id='searchKeyword']
+    find_type: xpath
+    operate_type: send_keys
+    text: 20191112lzytest
+    step: 输入货号
+  - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+    find_type: xpath
+    operate_type: click
+    step: 点击"搜索"
+  - element_info: /html/body/div[2]/div[2]/table/tbody/tr/td[4]/div/a[4]
+    find_type: xpath
+    operate_type: click
+    step: 点击"图片"
+  - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[3]/p
+    find_type: xpath
+    operate_type: move_to
+    step: 鼠标hover图片
+  - element_info: (//a[@title='裁剪'])[3]
+    find_type: xpath
+    operate_type: click
+    step: 点击裁剪菜单唤醒按钮
+  - element_info: (//span[text()='画图'])[2]
+    find_type: xpath
+    operate_type: click
+    step: 打开画图
+  - element_info: (//div[@class='qstitle']//img)[2]
+    find_type: xpath
+    operate_type: move_hold
+    wait_time: 1500
+    step: 画框
+  - element_info: (//a[@class=' menu-a'])[3]
+    find_type: xpath
+    operate_type: click
+    step: 还原画框
+  - element_info: (//li[@id='drawButton2']//a)[2]
+    find_type: xpath
+    operate_type: click
+    step: 打开模糊
+  - element_info: (//div[@class='qstitle']//img)[2]
+    find_type: xpath
+    operate_type: move_hold
+    wait_time: 1500
+    step: 画模糊框
+  - element_info: (//a[@class=' menu-a'])[3]
+    find_type: xpath
+    operate_type: click
+    step: 还原画模糊框
+  - element_info: (//li[@id='drawButton1']//a)[2]
+    find_type: xpath
+    operate_type: click
+    step: 打开画框
+  - element_info: (//div[@class='qstitle']//img)[2]
+    find_type: xpath
+    operate_type: move_hold
+    wait_time: 1500
+    step: 画框
+  - element_info: (//li[@id='drawButton2']//a)[2]
+    find_type: xpath
+    operate_type: click
+    step: 打开模糊
+  - element_info: (//div[@class='qstitle']//img)[2]
+    find_type: xpath
+    operate_type: move_hold
+    wait_time: 1500
+    step: 画模糊框
+  - element_info: (//a[@class='menu-a'])[4]
+    find_type: xpath
+    operate_type: click
+    step: 清除
+  - element_info: (//li[@id='drawButton1']//a)[2]
+    find_type: xpath
+    operate_type: click
+    step: 打开画框
+  - element_info: (//div[@class='qstitle']//img)[2]
+    find_type: xpath
+    operate_type: move_hold
+    wait_time: 1500
+    step: 画框
+  - element_info: (//li[@id='drawButton2']//a)[2]
+    find_type: xpath
+    operate_type: click
+    step: 打开模糊
+  - element_info: (//div[@class='qstitle']//img)[2]
+    find_type: xpath
+    operate_type: move_hold
+    wait_time: 1500
+    step: 画模糊框
+  - element_info: (//a[@class=' menu-a'])[4]
+    find_type: xpath
+    operate_type: click
+    step: 保存
+
+
+
+check:
+  - element_info: /html/body/div[23]/div/div/div/div/div/div
+    find_type: xpath
+    step: 检查是否有保存加载框
+  - element_info: /html/body/div[1]/div[1]/form/div[2]/div[2]/ul/li[3]/p
+    find_type: xpath
+    wait_time: 4000
+    step: 检查是否关闭成功

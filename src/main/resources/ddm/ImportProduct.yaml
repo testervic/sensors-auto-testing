@@ -1,0 +1,24 @@
+title:
+    - case_name: 验证商品导入功能
+testcase:
+    - element_info: /html/body/app-root/app-authorized/app-side-nav/div/div[1]/div/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击商品列表
+    - element_info: //*[@id="body"]/nz-spin/div/app-list/article/article/div/app-operation-list/div/button[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击导入商品信息
+    - element_info: /html/body/nz-modal/div/div[2]/div/div/div[2]/app-upload-excel/nz-upload/div/div/input
+      find_type: xpath
+      operate_type: send_keys
+      text: /var/lib/jenkins/workspace/AutoUITest/AutoUI/res/testfile/AutoTesting.xlsx
+      step: 上传excel文件
+    - element_info: /html/body/nz-modal/div/div[2]/div/div/div[2]/app-upload-excel/div/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击导入按钮
+check:
+      - element_info: /html/body/nz-modal/div/div[2]/div/div/div[2]/app-upload-excel/div/div/div/p
+        find_type: xpath
+        text: 全部导入成功

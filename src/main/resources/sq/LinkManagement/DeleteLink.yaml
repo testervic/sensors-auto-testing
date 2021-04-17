@@ -1,0 +1,57 @@
+title:
+    - case_name: 空链接上货
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[2]
+      find_type: xpath
+      operate_type: move_to
+      step: 移动-【上货管理】
+    - element_info: //*[contains(@class, 'third-sider-nav')]/li
+      find_type: xpath
+      operate_type: click
+      step: 点击-【所有链接】
+    - element_info: //div[text()='链接货号']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【链接货号】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【链接名称】
+    - element_info: .search-input-group .ant-input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: 淘宝-AutoUITestAddLink-02
+      step: 输入"淘宝-AutoUITestAddLink-02"
+    - element_info: //*[contains(@class, 'right')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【查询】
+    - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-table-row')]/td[9]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【删除】
+    - element_info: //*[contains(@class, 'footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+    - element_info: .search-input-group .ant-input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestCopyLink
+      step: 输入"AutoUITestCopyLink"
+    - element_info: //*[contains(@class, 'right')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【查询】
+    - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-table-row')]/td[9]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【删除】
+    - element_info: //*[contains(@class, 'footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+check:
+    - element_info: //*[contains(@class, 'distribute-header-menu')]
+      find_type: xpath
+      step: 验证是否在所有链接页面

@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="wiseoper" parallel="tests" thread-count="2"> <!-- 并行地执行test/classes/methods套件-->
+    <listeners>
+<!--        <listener class-name="util.ExtentTestNGIReporterListener"/> &lt;!&ndash; 测试报告&ndash;&gt;-->
+        <listener class-name="util.TestMonitor"/><!-- 记录日志-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+
+    <test name="HomePageCheckStagingTest-首页元素检查-Staging">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.soomey.net/azzurro"/>
+        <classes>
+            <class name="test.le.homepage.HomePageCheckStagingTest"/>
+        </classes>
+    </test>
+
+    <test name="FieldEntryCheckStagingTest-商品素材-字段录入字段检查-Staging">
+        <parameter name="browserType" value="chrome" />
+        <parameter name="browserVersion" value="" />
+        <parameter name="remoteIP" value="" />
+        <parameter name="appURL" value="http://www.soomey.net/azzurro"/>
+        <classes>
+            <class name="test.le.productmaterial.FieldEntryCheckStagingTest"/>
+        </classes>
+    </test>
+
+<!--    <test name="FieldEntrySubmitStagingTest-商品素材-字段录入提交-Staging">-->
+<!--        <parameter name="browserType" value="chrome" />-->
+<!--        <parameter name="browserVersion" value="" />-->
+<!--        <parameter name="remoteIP" value="" />-->
+<!--        <parameter name="appURL" value="http://www.soomey.net/azzurro"/>-->
+<!--        <classes>-->
+<!--            <class name="test.le.productmaterial.FieldEntrySubmitStagingTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
+

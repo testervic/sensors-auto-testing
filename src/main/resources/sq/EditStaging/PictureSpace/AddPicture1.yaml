@@ -1,0 +1,37 @@
+title:
+    - case_name: 编辑工作台-图片空间-上传图片
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div[2]/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑工作台】
+    - wait_time: 2000
+      switch_window: 1
+      element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestPictureSpace
+      step: 搜索"AutoUITestPictureSpace"
+    - element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: ENTER
+      step: 回车执行搜索
+    - wait_time: 1000
+      element_info: //*[contains(@class, 'list-container')]/div[2]/div/div/app-picture-list/nz-spin/div/section/div/app-picture-module/div/div/a
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑】
+    - wait_time: 500
+      switch_window: 1
+      element_info: //*[@id='addPicture__picturesContainer__MODEL__ALL']//*[contains(@class, 'icon')]
+      find_type: xpath
+      operate_type: click
+      step: 点击上传按钮
+check:
+      - element_info: //div[text()='开始上传']
+        find_type: xpath
+        step: 验证是否跳转到上传图片页面

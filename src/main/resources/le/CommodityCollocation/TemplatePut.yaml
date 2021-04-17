@@ -1,0 +1,71 @@
+title:
+  - case_name: 投放、结束投放
+testcase:
+  - element_info: //span[text()='商品互搭']
+    find_type: xpath
+    operate_type: click
+    step: 点击"商品互搭"
+  - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[6]/div/div[1]/a
+    find_type: xpath
+    operate_type: click
+    frame: MainBoard
+    step: 点击"自定义素材"
+  - element_info: /html/body/div[1]/div[2]/div/table/tbody/tr[2]/td[3]/a[2]
+    find_type: xpath
+    operate_type: click
+    step: 点击第一个模板的"投放"
+  - element_info: /html/body/div[1]/div[2]/form/div[1]/div/div[1]/span
+    find_type: xpath
+    operate_type: click
+    step: 点击投放店铺下拉框
+  - element_info: //span[text()='腹黑s:子账号2']
+    find_type: xpath
+    operate_type: click
+    step: 选择腹黑s
+  - element_info: /html/body/div[1]/div[2]/button
+    find_type: xpath
+    operate_type: click
+    step: 点击保存
+  - element_info: //*[@id="searchKeyword"]
+    find_type: xpath
+    operate_type: click
+    step: 点击输入框
+  - element_info: //*[@id="searchKeywordTextArea"]
+    find_type: xpath
+    operate_type: send_keys
+    text: 20191010lzy，lzytest20190910
+    step: 输入货号
+  - element_info: /html/body/div[1]/div[1]/div[2]/div[1]/span
+    find_type: xpath
+    operate_type: click
+    step: 点击搜索
+  - element_info: //*[@id="product_id_all"]
+    find_type: xpath
+    operate_type: click
+    step: 全选货号
+  - element_info: //*[@id="exportBtn"]
+    find_type: xpath
+    operate_type: click
+    wait_time: 1000
+    step: 点击投放
+  - element_info: /html/body/div[4]/div/div/div[2]/button
+    find_type: xpath
+    operate_type: click
+    step: 点击OK
+  - element_info: /html/body/div[1]/div[1]/div/div/ul/li[1]/a
+    find_type: xpath
+    operate_type: click
+    wait_time: 5000
+    step: 点击素材模板切换tab
+  - element_info: /html/body/div[1]/div[1]/div/div/ul/li[2]/a
+    find_type: xpath
+    operate_type: click
+    wait_time: 5000
+    step: 点击投放管理切换tab
+
+
+check:
+  - element_info: (//span[text()='已投放'])[1]
+    find_type: xpath
+    wait_time: 2000
+    step: 检查是否投放成功

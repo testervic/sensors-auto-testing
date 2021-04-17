@@ -1,0 +1,43 @@
+title:
+    - case_name: 验证图片分享功能
+testcase:
+    - element_info: //*[contains(@class, 'img-container')]
+      find_type: xpath
+      operate_type: click
+      step: 选中图片
+    - element_info: //*[contains(@class, 'ops-btns')]/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击分享
+    - element_info:  /html/body/div/div[6]/div/nz-modal/div/div[2]/div/div/div[2]/div/div[1]/div[2]/nz-radio-group/label[1]/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择有效天数“1天”
+    - element_info: //*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击创建链接
+    - element_info: //a[text()='通过邮件发送']
+      find_type: xpath
+      operate_type: click
+      step: 点击通过邮件发送
+    - element_info: /html/body/div/div[9]/div/nz-modal/div/div[2]/div/div/div[2]/app-email-modal/div[1]/div[2]/nz-select/div
+      find_type: xpath
+      operate_type: click
+      step: 点击选择收件人
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[6]
+      find_type: xpath
+      operate_type: click
+      step: 选择收件人
+    - element_info: //*[contains(@class, 'ng-invalid')]
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoTesting
+      step: 输入邮件标题
+    - element_info: //*[contains(@class, 'ant-col-8')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: over_click
+      step: 点击发送
+check:
+      - element_info: //div[text()='上传记录']
+        find_type: xpath

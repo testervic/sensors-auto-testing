@@ -1,0 +1,36 @@
+title:
+    - case_name: 新增测量示意图
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'second-navs')]/li[2]/ul/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【测量示意图】
+    - element_info: //*[contains(@class, 'btn-layout')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增】
+#    - element_info: //*[contains(@class, 'ant-upload-select')]//*[contains(@class, 'ant-upload')]/input
+#      find_type: xpath
+#      operate_type: send_keys
+#      text: D:\AutoUI-space\auto-testing\AutoUI\res\testfile\AutoTesting.png
+#      step: 输入-货号
+#    - element_info: //*[contains(@class, 'ant-select-selection__rendered')]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击-【经营类目】
+#    - element_info: //*[@title='服饰鞋包']
+#      find_type: xpath
+#      operate_type: click
+#      step: 勾选"服饰鞋包"
+#    - element_info: //*[contains(@class, 'ant-modal-footer')]//*[contains(@class, 'ant-btn-primary')]
+#      find_type: xpath
+#      operate_type: over_click
+#      step: 勾选"服饰鞋包"
+check:
+      - element_info: //div[text()='新建测量示意图']
+        find_type: xpath
+        step: 检查是否新增测量示意图

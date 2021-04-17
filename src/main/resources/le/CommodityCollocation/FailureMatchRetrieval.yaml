@@ -1,0 +1,49 @@
+title:
+  - case_name: 失效搭配检索
+testcase:
+  - element_info: //span[text()='商品互搭']
+    find_type: xpath
+    operate_type: click
+    step: 点击"商品互搭"
+  - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[6]/div/div[4]/a
+    find_type: xpath
+    operate_type: click
+    frame: MainBoard
+    step: 点击"失效搭配检索"
+  - element_info: //*[@id="descriptionLinkBtn"]
+    find_type: xpath
+    operate_type: click
+    step: 点击搭配检索
+  - element_info: //input[@value='TMALL']
+    find_type: xpath
+    operate_type: click
+    step: 选择天猫平台
+  - element_info: /html/body/div[2]/div/div/div[2]/div[3]/div/div/div[1]/span
+    find_type: xpath
+    operate_type: click
+    step: 打开下拉框
+  - element_info: //span[text()='chuu服饰旗舰店:阿拉雷']
+    find_type: xpath
+    operate_type: click
+    step: 选择chuu店铺
+  - element_info: //button[text()='确 定']
+    find_type: xpath
+    operate_type: click
+    wait_time: 1000
+    step: 点击确定
+  - element_info: /html/body/div[4]/div/div/div[2]/button[1]
+    find_type: xpath
+    operate_type: click
+    wait_time: 10000
+    step: 点击确定
+  - element_info: /html/body/div[4]/div/div/div[3]/button
+    find_type: xpath
+    operate_type: click
+    wait_time: 1000
+    step: 点击确定
+
+
+check:
+  - element_info: (//td[text()='运行中'])[1]
+    find_type: xpath
+    step: 检查是否进入检索队列

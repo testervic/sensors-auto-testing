@@ -1,0 +1,60 @@
+title:
+    - case_name: 智能拼图-批量拼图
+testcase:
+    - element_info: //*[@id="mCSB_1_container"]/div[5]/a/span[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击智能拼图
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[5]/div/div/a[2]
+      find_type: xpath
+      operate_type: click
+      frame: MainBoard
+      step: 点击模版设计
+    - element_info: //input[@placeholder='货号或品名']
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITesting
+      step: 输入内容"AutoUITesting"
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索
+    - element_info: (//span[text()='选择模板'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 选择模板
+    - element_info: //span[text()='下一页']
+      find_type: xpath
+      operate_type: click
+      step: 点击"下一页"
+    - element_info: (//ul[@id='templatesContainer']//li)[5]
+      find_type: xpath
+      operate_type: click
+      step: 勾选模板
+    - element_info: (//ul[@id='templatesContainer']//li)[6]
+      find_type: xpath
+      operate_type: click
+      step: 勾选模板
+    - element_info: (//ul[@id='templatesContainer']//li)[7]
+      find_type: xpath
+      operate_type: click
+      step: 勾选模板
+    - element_info: (//button[text()='确定'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"
+    - element_info: (//a[@class='a1'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"拼图"
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击"OK"
+check:
+    - element_info: (//span[text()='成功'])[2]
+      find_type: xpath
+      operate_type: getValue
+      text: 成功
+      wait_time: 5000
+      step: 检查拼图结果是否成功

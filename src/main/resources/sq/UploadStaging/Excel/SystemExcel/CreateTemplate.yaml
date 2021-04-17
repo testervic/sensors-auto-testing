@@ -1,0 +1,39 @@
+title:
+    - case_name: Excel自定义加入编辑工作台
+testcase:
+    - element_info: //a[text() = '点击下载《Excel表格模板》']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【点击下载《Excel表格模板》】
+    - element_info: /html/body/div/div[5]/div/nz-modal/div/div[2]/div/div/div[3]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【创建模板】
+    - element_info: /html/body/div/div[6]/div/nz-modal/div/div[2]/div/div/div[2]/div[4]/div[2]/nz-tree-select/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【选择类目】
+    - element_info:  /html/body/div/div[8]/div/div/nz-tree/ul/nz-tree-node/li/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击-"服饰鞋包"下拉图标
+    - element_info:  /html/body/div/div[8]/div/div/nz-tree/ul/nz-tree-node/li/ul/nz-tree-node/li/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击-"女装"下拉图标
+    - element_info:  //span[text()='衬衫']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【衬衫】
+    - element_info:  /html/body/div/div[6]/div/nz-modal/div/div[2]/div/div/div[3]/button[1]
+      find_type: xpath
+      operate_type: over_click
+      step: 点击-【确定】
+check:
+      - wait_time: 25000
+        element_info: //div[text()='模板下载']
+        find_type: xpath
+        step: 检查是否创建模板
+      - element_info: //a[text()='下载']
+        find_type: xpath
+        step: 检查是否创建模板

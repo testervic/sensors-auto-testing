@@ -1,0 +1,34 @@
+title:
+    - case_name: 资源图检查
+testcase:
+    - element_info: //a[@href='#collapseDerivation']
+      find_type: xpath
+      operate_type: click
+      step: 点击"资源图"
+    - element_info: //div[@id='collapseDerivation']/div[1]/a[1]
+      find_type: xpath
+      operate_type: click
+      frame: MainBoard
+      step: 点击"资源图生成"
+    - element_info: //input[@placeholder='选择年度']
+      find_type: xpath
+      operate_type: move_to
+      step: 移动鼠标到"年度"
+    - element_info: //span[text()='2020年度']
+      find_type: xpath
+      operate_type: click
+      step: 点击"2020"
+    - element_info: //input[@placeholder='选择期数']
+      find_type: xpath
+      operate_type: move_to
+      wait_time: 2000
+      step: 点击"选择期数"
+    - element_info: //span[text()='2020-11-04']
+      find_type: xpath
+      operate_type: click
+      step: 选择"2020-11-04"
+check:
+    - element_info: //span[text()='AutoUITesting']
+      find_type: xpath
+      wait_time: 3000
+      step: 验证货号为"AutoUITesting"

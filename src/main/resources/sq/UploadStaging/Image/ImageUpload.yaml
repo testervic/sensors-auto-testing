@@ -1,0 +1,32 @@
+title:
+    - case_name: 图片包上传
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【上传图片文件】
+    - wait_time: 500
+      switch_window: 1
+      element_info: .upload-search .ant-btn-default
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【重置】
+    - element_info: .ant-upload-select .ant-upload > input
+      find_type: cssSelector
+      operate_type: display
+      step: 显示隐藏的input元素
+#    - element_info: .ant-upload-select .ant-upload > input
+#      find_type: cssSelector
+#      operate_type: send_keys
+#      text: /var/lib/jenkins/workspace/SQ.AutoUITest/AutoUI/res/testfile/SQ_AutoUITest.zip
+#      text: D:\AutoUI-space\auto-testing\AutoUI\res\testfile\SQ_AutoUITest.zip
+#      step: 上传文件
+check:
+      - wait_time: 3000
+        element_info: //span[text()='上传并解析完成']
+        find_type: xpath
+        step: 检查是否在上传解析成功

@@ -1,0 +1,49 @@
+title:
+    - case_name: 字段录入提交(上)
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击产品素材
+    - element_info: //div[@id='collapseProduct']//a[@href='/authorized/merchant/product/add/new']
+      find_type: xpath
+      operate_type: click
+      step: 点击字段录入
+      frame: MainBoard
+    - element_info: /html/body/div[2]/form/div[1]/div[1]/ul/li[2]/b/div/div/div[3]/ul/li/ul/li[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击女装分类
+    - element_info: /html/body/div[2]/form/div[1]/div[1]/ul/li[2]/b/div/div/div[3]/ul/li[2]/ul/li[5]
+      find_type: xpath
+      operate_type: click
+      step: 点击衬衫
+    - element_info: code
+      find_type: id
+      operate_type: send_date_now
+      text: AutoUI-
+      step: 输入货号
+    - element_info: title
+      find_type: id
+      operate_type: send_date_now
+      text: 商品标题AutoUITesting
+      step: 输入标题
+    - element_info: //body/div/ul//a[@href='#sale']
+      find_type: xpath
+      operate_type: click
+      step: 点击销售属性
+    - element_info: /html//span[@id='saveProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击提交产品
+    - element_info: /html/body/div[11]/div/div/div[2]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+#      - element_info: code
+#        find_type: id
+#        step: 检查货号字段是否存在
+      - element_info: /html//span[@id='saveProduct']
+        find_type: xpath
+        step: 检查按钮是否存在

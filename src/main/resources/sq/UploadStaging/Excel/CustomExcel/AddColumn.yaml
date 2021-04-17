@@ -1,0 +1,29 @@
+title:
+    - case_name: 自定义Excel模板-删除
+testcase:
+    - element_info: /html/body/app-root/app-upload/div/app-upload-sku/div/nz-tabset/div[1]/div/div/div/div/div[1]/div[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【使用自定义模板】
+    - element_info: //*[contains(@class, 'my-template')]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【我的表格模板】
+    - element_info: /html/body/app-root/app-upload/div/app-customize-templates-creation/div/app-my-templates/nz-spin/div/div/div[2]/app-templates/div/div/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增列】
+    - element_info: /html/body/div/div[4]/div/nz-modal/div/div[2]/div/div/div[2]/form/nz-form-item/nz-form-control/div/span/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITest
+      step: 输入
+    - element_info: /html/body/div/div[4]/div/nz-modal/div/div[2]/div/div/div[3]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+
+check:
+     -  element_info: //td[text() = '04']
+        find_type: xpath
+        step: 检查自定义Excel模板是否新增列成功

@@ -1,0 +1,56 @@
+title:
+    - case_name: 短视频-新增短视频模板
+testcase:
+    - element_info: //span[text()='短视频']
+      find_type: xpath
+      operate_type: click
+      step: 点击"短视频"
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[7]/div/div/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"短视频模板"
+      frame: MainBoard
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击"新增"
+    - element_info: //span[text()='选择(1)']
+      find_type: xpath
+      operate_type: click
+      step: 点击"选择(1)"
+    - element_info: (//input[@data-option-name='主色模特正'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"主色模特正"
+    - element_info: //span[text()='选择(2)']
+      find_type: xpath
+      operate_type: click
+      step: 点击"选择(2)"按钮
+    - element_info: (//input[@data-option-name='主色模特正'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"主色模特正"按钮
+    - element_info: //span[text()='选择(3)']
+      find_type: xpath
+      operate_type: click
+      step: 点击"选择(3)"按钮
+    - element_info: (//input[@data-option-name='主色模特正'])[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击"主色模特正"按钮
+    - element_info: //span[text()='选择(4)']
+      find_type: xpath
+      operate_type: click
+      step: 点击"选择(4)"按钮
+    - element_info: (//input[@data-option-name='主色模特正'])[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击"主色模特正"按钮
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击"保存"按钮
+check:
+    - element_info: /html/body/div/div[1]/div
+      find_type: xpath
+      step: 检查是否跳转短视频配置列表页面

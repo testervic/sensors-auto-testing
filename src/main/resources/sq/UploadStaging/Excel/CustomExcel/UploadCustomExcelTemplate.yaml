@@ -1,0 +1,25 @@
+title:
+    - case_name: 自定义Excel模板-上传
+testcase:
+    - element_info: /html/body/app-root/app-upload/div/app-upload-sku/div/nz-tabset/div[1]/div/div/div/div/div[1]/div[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【使用自定义模板】
+    - element_info: //*[contains(@class, 'my-template')]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【我的表格模板】
+    - element_info: //*[contains(@class, 'add-btn')]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增自定义模板】
+    - element_info: .ng-star-inserted .ant-upload-btn > input
+      find_type: cssSelector
+      operate_type: display
+      step: 显示隐藏的input元素
+
+check:
+      - wait_time: 500
+        element_info: //div[text() = '筛选上传的数据']
+        find_type: xpath
+        step: 检查是否自定义Excel模板是否上传成功

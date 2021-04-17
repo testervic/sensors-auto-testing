@@ -1,0 +1,55 @@
+title:
+    - case_name: 上传图片加入编辑工作台
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【上传图片文件】
+    - wait_time: 500
+      switch_window: 1
+      element_info: .ops-code-input .ant-input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: SQ_AutoUITest
+      step: 搜索SQ_AutoUITest
+    - element_info: //*[contains(@class, 'upload-search')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击【查询】
+    - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-checkbox-input')]
+      find_type: xpath
+      operate_type: click
+      step: 勾选SQ_AutoUITest
+    - element_info: //*[contains(@class, 'ant-cascader-picker-label')]
+      find_type: xpath
+      operate_type: click
+      step: 点击【选择类目】
+    - element_info: //span[text()='服饰鞋包']
+      find_type: xpath
+      operate_type: click
+      step: 点击【服饰鞋包】
+    - element_info: //*[@title='女装']
+      find_type: xpath
+      operate_type: click
+      step: 点击【女装】
+    - element_info: //*[@title='衬衫']
+      find_type: xpath
+      operate_type: click
+      step: 点击【衬衫】
+    - element_info: //*[contains(@class, 'upload-details')]//*[contains(@class, 'container')]/div[3]/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击【加入编辑工作台】
+    - element_info: //*[contains(@class, 'footer-btns')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: over_click
+      step: 点击【下一步】
+
+check:
+      - element_info: //span[text()='上传图片']
+        find_type: xpath
+        step: 检查是否在上传图片页面

@@ -1,0 +1,122 @@
+title:
+    - case_name: 产品素材-综合列表
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击产品素材
+    - element_info: //a[@href='/authorized/merchant/product']
+      find_type: xpath
+      operate_type: click
+      step: 点击综合列表
+      frame: MainBoard
+    - element_info: //*[@id="searchKeyword"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 综合列表
+      step: 输入搜索内容
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索
+#    - element_info: /html/body/div[2]/div[2]/table/tbody/tr[1]/td[4]/div/a[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"复制"按钮
+#    - element_info: //input[@placeholder='年-月-日']
+#      find_type: xpath
+#      operate_type: click
+#      step: 选择指定日期
+#    - element_info: td:nth-of-type(6)
+#      find_type: cssSelector
+#      operate_type: click
+#      step: 选中日期1
+#    - element_info: /html/body/div[19]/div[1]/table/tbody
+#      find_type: xpath
+#      operate_type: click
+#      step: 选中日期2
+#    - element_info: /html/body/div[4]/div/div/div[3]/span[1]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击确定
+#    - element_info: (//button[text()='确定'])[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击确定弹窗
+#    - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击搜索
+    - element_info: /html/body/div[2]/div[2]/table/tbody/tr[1]/td[4]/div/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击"设密"按钮
+    - element_info: //*[@id="public"]
+      find_type: xpath
+      operate_type: click
+      step: 选中公开选项
+    - element_info: /html/body/div/form/div[3]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击"提交"按钮
+    - element_info: /html/body/div[2]/div/div/div[2]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"OK"按钮
+    - element_info: //*[@id="searchKeyword"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 综合列表
+      step: 输入搜索内容
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索
+    - element_info: /html/body/div[2]/div[2]/table/tbody/tr[1]/td[4]/div/a[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击"修改"按钮
+    - element_info: //*[@id="title"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 测试商品请勿上架修改删除
+      wait_time: 3000
+      step: 修改标题
+    - element_info: /html/body/div[1]/ul/li[2]/a
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击"销售属性"
+    - element_info: //*[@id="saveProduct"]
+      find_type: xpath
+      operate_type: click
+      wait_time: 3000
+      step: 点击"提交产品"按钮
+    - element_info: /html/body/div[9]/div/div/div[2]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"确认"按钮
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      wait_time: 2000
+      step: 点击弹窗"OK"按钮
+    - element_info: /html/body/div[2]/div[2]/table/tbody/tr[1]/td[4]/div/a[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击"图片"按钮
+    - element_info: //div[@id='bot_button']/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"保存"按钮
+    - element_info: /html/body/div[23]/div/div/div[2]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"OK"按钮
+check:
+    - element_info: (//a[@title='字段匹配'])[1]
+      find_type: xpath
+      step: 验证"字段匹配"按钮
+    - element_info: (//a[@title='智能测款'])[1]
+      find_type: xpath
+      step: 验证"新品鸟瞰"按钮

@@ -1,0 +1,29 @@
+title:
+    - case_name: Excel自定义加入编辑工作台
+testcase:
+    - element_info: /html/body/app-root/app-upload/div/app-upload-sku/div/nz-tabset/div[1]/div/div/div/div/div[1]/div[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【使用自定义模板】
+    - element_info: .upload-search .ops-code-input > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: CustomExcelAutoUpload
+      step: 搜索CustomExcelAutoUpload
+    - element_info: //*[contains(@class, 'upload-search')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【查询】
+    - element_info:  //*[contains(@class, 'ant-table-tbody')]/tr/td/label/span/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选-CustomExcelAutoUpload
+    - element_info:  //*[contains(@class, 'upload-details')]/app-customized-templates-uploader/div[3]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【加入编辑工作台】
+check:
+      - wait_time: 6000
+        element_info: //*[contains(@class, 'active')]
+        find_type: xpath
+        step: 检查是否在上传Excel页面

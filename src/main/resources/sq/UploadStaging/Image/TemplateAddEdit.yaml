@@ -1,0 +1,69 @@
+title:
+  - case_name: 上传图片加入编辑工作台
+testcase:
+  - element_info: //*[contains(@class, 'ant-btn')]
+    find_type: xpath
+    operate_type: move_to
+    step: 鼠标移动-【上货工作台】
+  - element_info: //*[contains(@class, 'popover-container')]/div/ul/li/div
+    find_type: xpath
+    operate_type: click
+    step: 点击-【上传图片文件】
+  - wait_time: 500
+    switch_window: 1
+    element_info: .ops-code-input .ant-input
+    find_type: cssSelector
+    operate_type: send_keys
+    text: AutoUITestPictureLink
+    step: 搜索AutoUITestPictureLink
+  - element_info: //*[contains(@class, 'upload-search')]//*[contains(@class, 'ant-btn-primary')]
+    find_type: xpath
+    operate_type: click
+    step: 点击【查询】
+  - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-checkbox-input')]
+    find_type: xpath
+    operate_type: click
+    step: 勾选AutoUITestPictureLink
+  - element_info: //*[contains(@class, 'ant-cascader-picker-label')]
+    find_type: xpath
+    operate_type: click
+    step: 点击【选择类目】
+  - element_info: //span[text()='服饰鞋包']
+    find_type: xpath
+    operate_type: click
+    step: 点击【服饰鞋包】
+  - element_info: //*[@title='女装']
+    find_type: xpath
+    operate_type: click
+    step: 点击【女装】
+  - element_info: //*[@title='衬衫']
+    find_type: xpath
+    operate_type: click
+    step: 点击【衬衫】
+  - element_info: //*[contains(@class, 'ant-table-tbody')]/tr/td[8]/nz-select/div/div
+    find_type: xpath
+    operate_type: click
+    step: 点击【选择模特模板组合】
+  - element_info: //*[contains(@class, 'ant-select-dropdown-menu-item')]
+    find_type: xpath
+    operate_type: click
+    step: 点击【AutoUITest】
+  - element_info: //*[contains(@class, 'upload-details')]//*[contains(@class, 'container')]/div[3]/button[3]
+    find_type: xpath
+    operate_type: click
+    step: 点击【加入编辑工作台】
+  - element_info: //*[contains(@class, 'footer-btns')]//*[contains(@class, 'ant-btn-primary')]
+    find_type: xpath
+    operate_type: over_click
+    step: 点击【下一步】
+  - wait_time: 2000
+    switch_window: 1
+    element_info: //*[contains(@class, 'text-title')]
+    find_type: xpath
+    operate_type: click
+    step: 点击-【编辑工作台】
+check:
+  - wait_time: 2000
+    element_info: //div[text()=' 编辑工作台 ']
+    find_type: xpath
+    step: 检查是否加入编辑工作台

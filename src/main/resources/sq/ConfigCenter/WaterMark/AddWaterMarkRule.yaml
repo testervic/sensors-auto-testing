@@ -1,0 +1,21 @@
+title:
+    - case_name: 新增水印配置分组
+testcase:
+    - element_info: //*[contains(@class, 'table-operate-column')]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增规则】
+    - element_info: //*[contains(@class, 'handle-width')]
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITest
+      step: 点击-【水印配置】
+    - element_info: //span[text()='电脑端']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【电脑端】
+
+check:
+      - element_info: //h3[text()='水印设置']
+        find_type: xpath
+        step: 检查是否新增测量示意图

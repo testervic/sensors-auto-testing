@@ -1,0 +1,19 @@
+title:
+    - case_name: 新增测量示意图
+testcase:
+    - element_info: //*[contains(@class, 'ant-select-selection__rendered')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【经营类目】
+    - element_info: //*[@title='服饰鞋包']
+      find_type: xpath
+      operate_type: click
+      step: 勾选"服饰鞋包"
+    - element_info: //*[contains(@class, 'ant-modal-footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: over_click
+      step: 点击-【确定】
+check:
+      - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-table-row')]
+        find_type: xpath
+        step: 检查是否新增测量示意图

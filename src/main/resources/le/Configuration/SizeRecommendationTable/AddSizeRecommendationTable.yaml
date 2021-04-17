@@ -1,0 +1,107 @@
+title:
+    - case_name: 配置-尺码推荐表-新增
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/sizeTTs?type=RECOMMENDED_SIZE_TABLE']
+      find_type: xpath
+      operate_type: click
+      step: 点击"尺码推荐表"
+      frame: MainBoard
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动4
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动5
+    - element_info: //span[text()='新增']
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="name"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: AutoUI
+      step: 输入名称
+    - element_info: //*[@id="tradeKeyword"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 校服
+      step: 输入校服类目
+    - element_info: //li[text()='校服']
+      find_type: xpath
+      operate_type: click
+      step: 选择校服类目
+    - element_info: //span[@title='添加列']
+      find_type: xpath
+      operate_type: click
+      step: 增加一列
+    - element_info: //span[@title='添加行']
+      find_type: xpath
+      operate_type: click
+      step: 增加一行
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[3]/b/table/tbody/tr[2]/td[2]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: 150
+      step: 输入数据1
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[3]/b/table/tbody/tr[3]/td[1]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: 175
+      step: 输入数据2
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[3]/b/table/tbody/tr[3]/td[2]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: L合适
+      step: 输入数据3
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击保存
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动4
+    - element_info: //span[text()='尺码推荐表']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动5
+
+
+check:
+    - element_info: //td[text()='L合适']
+      find_type: xpath
+      step: 检查是否新建成功

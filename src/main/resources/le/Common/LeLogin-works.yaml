@@ -1,0 +1,20 @@
+title:
+    - case_name: 验证LE登录-works
+testcase:
+    - element_info: /html//input[@id='credential']
+      find_type: xpath
+      operate_type: send_keys
+      text: works
+      step: 点击输入账号
+    - element_info: /html//input[@id='password']
+      find_type: xpath
+      operate_type: send_keys
+      text: R4vWSV0z
+      step: 点击输入密码
+    - element_info: //form[@id='loginForm']/div[@class='login-form']//span[.='登　录']
+      find_type: xpath
+      operate_type: click
+      step: 点击登录
+check:
+      - element_info: //*[@id="top"]/div/div[2]/div/ul/li[7]/a/div/span[2]
+        find_type: xpath

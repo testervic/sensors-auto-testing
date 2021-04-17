@@ -1,0 +1,71 @@
+title:
+    - case_name: 检查首页元素是否存在
+testcase:
+    - element_info: //*[contains(@class, 'global_logo')]/a/img
+      find_type: xpath
+      operate_type: click
+      step: 点击首页logo
+check:
+    - element_info: /html//a[@id='serviceOnline']
+      find_type: xpath
+      step: 检查"客服"元素是否存在
+    - element_info: //a[text()='原路返回']
+      find_type: xpath
+      step: 检查"原路返回"元素是否存在
+    - element_info: (//a[@class='material']//div)[1]
+      find_type: xpath
+      step: 检查"帮助"元素是否存在
+    - element_info: //span[text()='定制服务']
+      find_type: xpath
+      step: 检查"定制服务"元素是否存在
+    - element_info: //*[contains(@class, 'icon-user-tie')]
+      find_type: xpath
+      step: 检查"账号"元素是否存在
+    - element_info: //a[text()='退出登录']
+      find_type: xpath
+      step: 检查"退出登录"元素是否存在
+    - element_info: //span[text()='产品素材']
+      find_type: xpath
+      step: 检查"产品素材"元素是否存在
+    - element_info: //span[text()='详情页']
+      find_type: xpath
+      step: 检查"详情页"元素是否存在
+    - element_info: //span[text()='资源图']
+      find_type: xpath
+      step: 检查"资源图"元素是否存在
+    - element_info: //span[text()='POP海报']
+      find_type: xpath
+      step: 检查"POP海报"元素是否存在
+    - element_info: //span[text()='智能拼图']
+      find_type: xpath
+      step: 检查"智能拼图"元素是否存在
+    - element_info: //span[text()='商品互搭']
+      find_type: xpath
+      step: 检查"商品互搭"元素是否存在
+    - element_info: //span[text()='短视频']
+      find_type: xpath
+      step: 检查"短视频"元素是否存在
+    - element_info: //span[text()='成果导出']
+      find_type: xpath
+      step: 检查"成果导出"元素是否存在
+    - element_info: //span[text()='模板']
+      find_type: xpath
+      step: 检查"模板"元素是否存在
+    - element_info: //span[text()='展示站点']
+      find_type: xpath
+      step: 检查"展示站点"元素是否存在
+    - element_info: //span[text()='搜相似']
+      find_type: xpath
+      step: 检查"搜相似"元素是否存在
+    - element_info: //span[text()='货品罗盘']
+      find_type: xpath
+      step: 检查"货品罗盘"元素是否存在
+    - element_info: //span[text()='智能抠图']
+      find_type: xpath
+      step: 检查"智能抠图"元素是否存在
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      step: 检查"配置"元素是否存在
+    - element_info: //span[text()='回收站']
+      find_type: xpath
+      step: 检查"回收站"元素是否存在

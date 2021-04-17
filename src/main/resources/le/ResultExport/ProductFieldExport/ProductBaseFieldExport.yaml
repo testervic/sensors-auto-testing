@@ -1,0 +1,51 @@
+title:
+    - case_name: 成果导出-产品字段导出-基础字段导出
+testcase:
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[8]/a/span[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击成果导出
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[8]/div/div/a[3]
+      find_type: xpath
+      operate_type: click
+      frame: MainBoard
+      step: 点击"产品字段导出"
+    - element_info: //span[text()[normalize-space()='选择产品']]
+      find_type: xpath
+      operate_type: click
+      step: 点击选择产品
+    - element_info: //a[@href='#container2020']
+      find_type: xpath
+      operate_type: click
+      step: 点击"2020"
+    - element_info: //input[@value='2020-11-04']
+      find_type: xpath
+      operate_type: click
+      step: 点击"2020-11-04"
+    - element_info: //button[text()='确定']
+      find_type: xpath
+      operate_type: click
+      step: 点击"确定"按钮
+    - element_info: //span[text()='字段导出内容选择']
+      find_type: xpath
+      operate_type: move_to
+      step: 滑动鼠标"字段导出内容选择"按钮
+    - element_info: (//input[@name='exportTotalFields'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"产品基础字段"按钮
+    - element_info: //span[@title='点击导出产品字段']
+      find_type: xpath
+      operate_type: click
+      step: 点击"点击导出产品字段"按钮
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击"确认"按钮
+check:
+      - element_info: (//span[text()='成功'])[1]
+        find_type: xpath
+        operate_type: getValue
+        text: 成功
+        wait_time: 5000
+        step: 检查导出状态是否成功

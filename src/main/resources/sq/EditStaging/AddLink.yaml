@@ -1,0 +1,42 @@
+title:
+    - case_name: 编辑工作台-生成详情页
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div[2]/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑工作台】
+    - wait_time: 2000
+      switch_window: 1
+      element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestAddLink
+      step: 搜索"AutoUITestAddLink"
+    - element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: ENTER
+      step: 回车执行搜索
+    - element_info: //*[contains(@class, 'ant-tabs-extra-content')]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增链接】
+    - element_info: //*[contains(@class, 'ant-modal-body')]//*[contains(@class, 'ant-radio-group')]/label[2]
+      find_type: xpath
+      operate_type: click
+      step: 勾选"考拉"
+    - element_info: //*[contains(@class, 'ant-modal-footer')]//*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【新增链接】
+    - element_info: //div[text()='考拉']
+      find_type: xpath
+      operate_type: click
+      step: 点击-【考拉链接】
+check:
+      - element_info: //div[text()='考拉']
+        find_type: xpath
+        step: 检查是否新增链接

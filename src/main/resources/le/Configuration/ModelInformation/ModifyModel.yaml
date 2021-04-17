@@ -1,0 +1,69 @@
+title:
+    - case_name: 配置-模特信息-修改、删除模特
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: //a[@href='/authorized/merchant/templateResource/model']
+      find_type: xpath
+      operate_type: click
+      step: 点击"模特信息"
+      frame: MainBoard
+    - element_info: //span[text()='模特信息']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='模特信息']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='模特信息']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: /html/body/div/div[2]/table/tbody/tr[12]/td[7]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击"已启用"按钮
+    - element_info: //button[text()='OK']
+      find_type: xpath
+      operate_type: click
+      step: 点击OK
+    - element_info: /html/body/div/div[2]/table/tbody/tr[14]/td[8]/a[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"修改"
+    - element_info: //input[@placeholder='输入模特名字']
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoModifyModel
+      step: 输入模特姓名
+    - element_info: //span[text()='保存']
+      find_type: xpath
+      operate_type: click
+      step: 点击"保存"
+    - element_info: //span[text()='模特信息']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='模特信息']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='模特信息']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: /html/body/div/div[2]/table/tbody/tr[12]/td[8]/a[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //button[text()='确认']
+      find_type: xpath
+      operate_type: click
+      step: 点击确认
+check:
+    - element_info: //span[text()='模特信息']
+      find_type: xpath
+      step: 检查是否跳转模特页面

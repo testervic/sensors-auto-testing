@@ -1,0 +1,143 @@
+title:
+    - case_name: 创建模板
+testcase:
+    - element_info: /html/body/div[1]/div[1]/a/img
+      find_type: xpath
+      operate_type: click
+      step: 点击首页logo
+      defaultContent: 1
+    - element_info: //*[@id="mCSB_1_container"]/div[5]/a/span[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击智能拼图
+    - element_info: //*[@id="collapsePuzzle"]/div/a[1]
+      find_type: xpath
+      operate_type: click
+      frame: MainBoard
+      step: 点击模版设计
+  #  - element_info: (//a[@class='a1'])[1]
+  #    find_type: xpath
+  #    operate_type: click
+  #    step: 点击删除
+  #  - element_info: /html/body/div[3]/div/div/div[2]/button[1]
+  #    find_type: xpath
+  #    operate_type: click
+  #    step: 点击确定
+    - element_info: //*[@id="myTab"]/li[2]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击创建模板
+    - element_info: //*[@id="templateName"]
+      find_type: xpath
+      operate_type: send_date_now
+      text: 自动巡检
+      step: 输入模板名称
+    - element_info: /html/body/div[2]/div/form/div/div/div[2]/div[3]/div/label[1]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选淘宝
+    - element_info: //input[@value='TMALL']
+      find_type: xpath
+      operate_type: click
+      step: 勾选天猫
+    - element_info: //input[@data-value='JD']
+      find_type: xpath
+      operate_type: click
+      step: 勾选京东
+    - element_info: //input[@value='VIP']
+      find_type: xpath
+      operate_type: click
+      step: 勾选VIP
+    - element_info: //input[@value='PDD']
+      find_type: xpath
+      operate_type: click
+      step: 勾选PDD
+    - element_info: /html/body/div[2]/div/form/div/div/div[2]/div[4]/div[1]/div/label[1]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选主图
+    - element_info: /html/body/div[2]/div/form/div/div/div[2]/div[4]/div[1]/div/label[2]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选颜色图
+    - element_info: (//input[@data-site='TMALL'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 勾选天猫主图
+    - element_info: /html/body/div[2]/div/form/div/div/div[2]/div[4]/div[2]/div/label[4]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选天猫颜色图
+    - element_info: (//input[@data-site='JD'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 勾选京东主图
+    - element_info: /html/body/div[2]/div/form/div/div/div[2]/div[4]/div[4]/div/label[3]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选京东透明图
+    - element_info: (//input[@data-site='PDD'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 勾选PDD轮播图
+    - element_info: /html/body/div[2]/div/form/div/div/div[2]/div[4]/div[18]/div/label[2]/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选PDD预览图
+    - element_info: /html/body/div[2]/div/form/div/div/div[2]/div[5]/div/ul/li[1]/label/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选女鞋
+    - element_info: //*[@id="mainForm"]/div/div/div[2]/div[6]/div/div/button
+      find_type: xpath
+      operate_type: click
+      step: 点击尺寸设定
+    - element_info: //*[@id="800*800_size"]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击800*800
+    - element_info: //*[@id="mainForm"]/div/div/div[2]/div[7]/div/div[1]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击主副色
+    - element_info: //*[@id="mainForm"]/div/div/div[2]/div[7]/div/div[1]/ul/li[2]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击不区分
+    - element_info: //button[text()='开始设计']
+      find_type: xpath
+      operate_type: click
+      wait_time: 1000
+      step: 点击开始设计
+    - element_info: /html/body/div[1]/div[3]/div[1]/div/span[1]
+      find_type: xpath
+      operate_type: click
+      switch_window: 1
+      step: 点击保存
+      wait_time: 3000
+    - element_info: /html/body/div[10]/div[2]/div/div[2]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+    - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[5]/div/div/a[1]
+      find_type: xpath
+      operate_type: click
+      switch_window: 1
+      frame: MainBoard
+      step: 点击模板设计
+check:
+    - element_info: /html/body/div[1]/table/tbody/tr[2]/td[5]/p[1]
+      find_type: xpath
+      step: 检查淘宝主图是否存在
+    - element_info: /html/body/div[1]/table/tbody/tr[2]/td[5]/p[2]
+      find_type: xpath
+      step: 检查天猫主图是否存在
+    - element_info: /html/body/div[1]/table/tbody/tr[2]/td[5]/p[3]
+      find_type: xpath
+      step: 检查京东主图是否存在
+    - element_info: /html/body/div[1]/table/tbody/tr[2]/td[5]/p[4]
+      find_type: xpath
+      step: 检查PDD主图是否存在
+    - element_info: /html/body/div[1]/table/tbody/tr[2]/td[7]/span
+      find_type: xpath
+      step: 检查状态是否为已启用

@@ -1,0 +1,33 @@
+title:
+    - case_name: 验证图片上传功能
+testcase:
+    - element_info: //*[contains(@class, 'hover-icon')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上传】
+    - element_info: .customized-upload .ant-upload-select > div > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: /var/lib/jenkins/workspace/DDM.AutoUITest/AutoUI/res/testfile/AutoTesting.jpg
+#      text: D:\AutoUI-space\auto-testing\AutoUI\res\testfile\AutoTesting.jpg
+      step: 上传AutoTesting.jpg
+    - element_info: //*[contains(@class, 'update-info-modal')]//*[@aria-label='Close']
+      find_type: xpath
+      operate_type: click
+      step: 隐藏上传记录
+    - element_info: //html/body/app-root/app-authorized/app-side-nav/div/div[2]/div[2]/nz-spin/div/app-ddm/div/nz-layout/nz-layout/nz-content/perfect-scrollbar/div/div/nz-spin/div/app-folder-zone/nz-spin/div/article/ngx-file-drop/div/div/app-list/div/article/th/span/div/span/label/span
+      find_type: xpath
+      operate_type: click
+      step: 全选
+    - element_info: //*[contains(@class, 'ops-btns')]/button[9]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //*[contains(@class, 'ant-modal-confirm-btns')]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+
+check:
+      - element_info: //div[text()='上传记录']
+        find_type: xpath

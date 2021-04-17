@@ -1,0 +1,23 @@
+title:
+    - case_name: 删除水印配置规则
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'clickable')]/a
+      find_type: xpath
+      operate_type: click
+      step: 点击-【水印配置】
+    - element_info: //*[contains(@class, 'ant-table-tbody')]/tr[2]/td[6]/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【删除】
+    - element_info: //*[contains(@class, 'ant-modal-confirm-btns')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+check:
+      - element_info: //h3[text()='水印设置']
+        find_type: xpath
+        step: 检查是否水印设置页面

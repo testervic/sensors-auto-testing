@@ -1,0 +1,45 @@
+title:
+    - case_name: 上传Excel-自定义模板-创建/更新商品
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击"产品素材"
+    - element_info: //a[@href='/web/pim-shared/#/upload/sku/system-templates']
+      find_type: xpath
+      operate_type: click
+      step: 点击"上传Excel文件"
+    - element_info: (//div[@role='tab']//a)[2]
+      find_type: xpath
+      operate_type: click
+      switch_window: 1
+      step: 点击"使用自定义模板"
+#    - element_info: (//input[@type='checkbox'])[5]
+#      find_type: xpath
+#      operate_type: click
+#      wait_time: 3000
+#      step: 勾选"商品"
+#    - element_info: (//input[@type='checkbox'])[6]
+#      find_type: xpath
+#      operate_type: click
+#      step: 勾选"商品"
+#    - element_info: (//input[@type='checkbox'])[7]
+#      find_type: xpath
+#      operate_type: click
+#      step: 勾选"商品"
+#    - element_info: (//input[@type='checkbox'])[8]
+#      find_type: xpath
+#      operate_type: click
+#      step: 勾选"商品"
+#    - element_info: (//input[@type='checkbox'])[9]
+#      find_type: xpath
+#      operate_type: click
+#      step: 勾选"商品"
+#    - element_info: (//div[@class='ops-btns ng-star-inserted']//button)[2]
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击"创建/更新商品"
+#check:
+#    - element_info: //span[text()='创建/更新商品成功!']
+#      find_type: xpath
+#      step: 检查商品是否更新成功

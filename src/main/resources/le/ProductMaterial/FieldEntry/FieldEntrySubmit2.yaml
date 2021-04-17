@@ -1,0 +1,28 @@
+title:
+    - case_name: 字段录入提交(下)
+testcase:
+    - element_info: title
+      find_type: id
+      operate_type: send_keys
+      text: 我是商品标题AutoUITesting
+      step: 输入标题
+    - element_info: //body/div/ul//a[@href='#sale']
+      find_type: xpath
+      operate_type: click
+      step: 点击销售属性
+    - element_info: /html//span[@id='saveProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击提交产品
+    - element_info: /html/body/div[11]/div/div/div[2]/button[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+#    - element_info: //button[@class='bootbox-close-button close']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击关闭弹窗
+check:
+      - element_info: /html//span[@id='saveProduct']
+        find_type: xpath
+        step: 检查按钮是否存在

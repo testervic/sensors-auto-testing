@@ -1,0 +1,22 @@
+title:
+    - case_name: 进入上传Excel
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div/ul/li[2]/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【上传Excel文件】
+    - wait_time: 500
+      switch_window: 1
+      element_info: .active
+      find_type: cssSelector
+      operate_type: click
+      step: 点击-【上传Excel表格】
+
+check:
+      - element_info: //*[contains(@class, 'active')]
+        find_type: xpath
+        step: 检查是否在上传Excel页面

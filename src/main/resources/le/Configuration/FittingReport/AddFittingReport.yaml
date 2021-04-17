@@ -1,0 +1,128 @@
+title:
+    - case_name: 配置-试穿报告-新增
+testcase:
+    - element_info: //span[text()='配置']
+      find_type: xpath
+      operate_type: click
+      step: 点击"配置"
+    - element_info: mCSB_1_container
+      find_type: id
+      operate_type: forSliding
+      step: 向上滑动
+    - element_info: //a[@href='/authorized/merchant/setting/tryReport/sizeTTs?type=TRY_REPORT_SIZE_TABLE']
+      find_type: xpath
+      operate_type: click
+      step: 点击"试穿报告"
+      frame: MainBoard
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动4
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动5
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动6
+    - element_info:  /html/body/div[1]/div[3]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击新增
+    - element_info: //*[@id="name"]
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入名称
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[1]/td[1]/span
+      find_type: xpath
+      operate_type: click
+      step: 新增一列
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[2]/td[7]/span
+      find_type: xpath
+      operate_type: click
+      step: 新增一行
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[2]/td[2]/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入数据1
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[3]/td[1]/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入数据2
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[3]/td[2]/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入数据3
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[3]/td[3]/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入数据4
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[3]/td[4]/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入数据5
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[3]/td[5]/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入数据6
+    - element_info: /html/body/div[1]/div[1]/form/ul/li[2]/b/table/tbody/tr[3]/td[6]/textarea
+      find_type: xpath
+      operate_type: send_keys
+      text: LzyAutoUITest
+      step: 输入数据7
+    - element_info: /html/body/div[1]/div[2]/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"保存"
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动1
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动2
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动3
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动4
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动5
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动6
+    - element_info: //span[text()='试穿报告']
+      find_type: xpath
+      operate_type: sliding_up
+      step: 向上滑动7
+check:
+    - element_info: (//td[text()='LzyAutoUITest'])[1]
+      find_type: xpath
+      step: 检查是否新建成功

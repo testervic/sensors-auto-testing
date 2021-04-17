@@ -1,0 +1,45 @@
+title:
+    - case_name: 空链接上货
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[2]
+      find_type: xpath
+      operate_type: move_to
+      step: 移动-【上货管理】
+    - element_info: //*[contains(@class, 'third-sider-nav')]/li
+      find_type: xpath
+      operate_type: click
+      step: 点击-【所有链接】
+    - element_info: //*[@id="body"]/nz-spin/div/app-all-links-product/div/app-distribute-search-bar/div/div[1]/nz-input-group/input
+      find_type: xpath
+      operate_type: send_keys
+      text: AutoUITestEmptyLink
+      step: 输入"AutoUITestEmptyLink"
+    - element_info: //*[contains(@class, 'right')]/button
+      find_type: xpath
+      operate_type: click
+      step: 点击-【查询】
+    - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-table-row')]/td[9]/a[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【铺货】
+    - element_info: //*[contains(@class, 'link-table')]//*[contains(@class, 'ant-table-tbody')]/tr/td/label/span/input
+      find_type: xpath
+      operate_type: click
+      step: 勾选"淘宝-AutoUITestEmptyLink-01"
+    - element_info: //*[contains(@class, 'ant-radio-checked')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【放入仓库】
+    - element_info: //*[contains(@class, 'ant-layout-footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【确定】
+    - wait_time: 10000
+      element_info: //*[contains(@class, 'third-sider-nav')]/li[4]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【已铺货】
+check:
+    - element_info: //*[contains(@class, 'distribute-header-menu')]//*[contains(@class, 'active')]
+      find_type: xpath
+      step: 验证铺货结果

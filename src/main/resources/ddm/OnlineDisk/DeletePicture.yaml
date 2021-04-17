@@ -1,0 +1,34 @@
+title:
+    - case_name: 验证图片删除功能
+testcase:
+#    - element_info: //*[contains(@class, 'update-info-modal')]//*[@aria-label='Close']
+#      find_type: xpath
+#      operate_type: click
+#      step: 隐藏上传记录
+#    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击年度-2020
+#    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28.a307bce1b4034be78c2874e7434461d9']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击季节-春夏
+    - element_info: //*[@id='id98b3c0bddb05433c928dbb87edf4c558.681b2160a1554330aeb3602dc42a94c6.9030086ae4df4cdabab19c3f5123094e.efeec5421e1f4ac8a7ba3900b9bc2a28.a307bce1b4034be78c2874e7434461d9.a70a24fb580548abacc4f07b2b5392e3.d06436c718fa4dd48c36827c5f82bb3c']
+      find_type: xpath
+      operate_type: click
+      step: 点击品色号-AutoTesting000UIDontTouch
+    - element_info: /html/body/app-root/app-authorized/app-side-nav/div/div[2]/div[2]/nz-spin/div/app-ddm/div/nz-layout/nz-layout/nz-content/perfect-scrollbar/div/div[1]/nz-spin/div/app-folder-zone/nz-spin/div/article/ngx-file-drop/div/div/app-list/div/span/nz-tabset/div[2]/div/article/th/span/div/span/label/span[1]
+      find_type: xpath
+      operate_type: click
+      step: 全选图片
+    - element_info: //*[contains(@class, 'ops-btns')]/button[8]
+      find_type: xpath
+      operate_type: click
+      step: 点击删除
+    - element_info: //*[contains(@class, 'ant-modal-confirm-btns')]/button[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击确定
+check:
+      - element_info: //div[text()='上传记录']
+        find_type: xpath

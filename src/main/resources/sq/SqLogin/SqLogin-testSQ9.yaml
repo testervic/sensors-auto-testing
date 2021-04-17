@@ -1,0 +1,35 @@
+title:
+    - case_name: 验证登录功能
+testcase:
+    - element_info: .//*[@id='credential']
+      find_type: xpath
+      operate_type: send_keys
+      text: testSQ9
+ ##     text: SQTEST
+      step: 点击输入账号
+    - element_info: password
+      find_type: id
+      operate_type: send_keys
+      text: exygcmqo
+##      text: dSleDCjp
+      step: 点击输入密码
+    - element_info: //*[@id="account-login-form"]/nz-form-item[3]/nz-form-control/div/span/button
+      find_type: xpath
+      operate_type: click
+      step: 点击登录按钮
+check:
+    - element_info: (//article[@class='statistics-item']//span)[1]
+      find_type: xpath
+      step: 验证"录入商品"是否存在数据
+    - element_info: (//article[@class='statistics-item']//span)[3]
+      find_type: xpath
+      step: 验证"录入素材图"是否存在数据
+    - element_info: (//article[@class='statistics-item']//span)[5]
+      find_type: xpath
+      step: 验证"生成详情页"是否存在数据
+    - element_info: (//span[@class='statistics-count'])[4]
+      find_type: xpath
+      step: 验证"铺货成功"是否存在数据
+    - element_info: (//span[@class='statistics-count'])[5]
+      find_type: xpath
+      step: 验证"平均上货耗时"是否存在数据

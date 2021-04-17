@@ -1,0 +1,68 @@
+title:
+  - case_name: 新增、修改、删除模板
+testcase:
+  - element_info: //span[text()='商品互搭']
+    find_type: xpath
+    operate_type: click
+    step: 点击"商品互搭"
+  - element_info: /html/body/div[1]/div[2]/div/div[1]/div/div[6]/div/div[1]/a
+    find_type: xpath
+    operate_type: click
+    frame: MainBoard
+    step: 点击"自定义素材"
+  - element_info: //button[text()='新增模板(旧版)']
+    find_type: xpath
+    operate_type: click
+    step: 点击"新增模板（旧版）"
+  - element_info: //*[@id="name"]
+    find_type: xpath
+    operate_type: send_date_now
+    text: AutoUI
+    frame: ueditor_0
+    step: 输入模板名称
+  - element_info: /html/body
+    find_type: xpath
+    operate_type: send_keys
+    text: 一二三四五六七八九十
+    wait_time: 2000
+    step: 输入素材代码
+  - element_info: //*[@id="dd_toggle"]
+    find_type: xpath
+    operate_type: click
+    defaultContent: 1
+    frame: MainBoard
+    step: 切换
+  - element_info: /html/body/div[1]/div[2]/button[1]
+    find_type: xpath
+    operate_type: click
+    wait_time: 1000
+    step: 点击提交
+  - element_info: //button[text()='OK']
+    find_type: xpath
+    operate_type: click
+    step: 点击"OK"
+  - element_info: /html/body/div[1]/div[2]/div/table/tbody/tr[2]/td[3]/a[1]
+    find_type: xpath
+    operate_type: click
+    step: 点击“修改”
+  - element_info: /html/body/div[1]/form/div[2]/div/div/div[1]/div[1]/div/div[2]/div[11]/div/div/div[1]/div
+    find_type: xpath
+    operate_type: click
+    step: 输入素材代码
+  - element_info: /html/body/div[1]/div[2]/button[1]
+    find_type: xpath
+    operate_type: click
+    wait_time: 1000
+    step: 点击提交
+  - element_info: //button[text()='OK']
+    find_type: xpath
+    operate_type: click
+    step: 点击"OK"
+
+
+
+check:
+  - element_info: //td[text()='素材模板名称']
+    find_type: xpath
+    wait_time: 500
+    step: 检查是否修改成功

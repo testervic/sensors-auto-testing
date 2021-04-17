@@ -1,0 +1,75 @@
+title:
+    - case_name: 编辑工作台-生成详情页
+testcase:
+    - element_info: //*[contains(@class, 'ant-btn')]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【上货工作台】
+    - element_info: //*[contains(@class, 'popover-container')]/div[2]/ul/li/div
+      find_type: xpath
+      operate_type: click
+      step: 点击-【编辑工作台】
+    - wait_time: 2000
+      switch_window: 1
+      element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestResourcePicture
+      step: 搜索"AutoUITestResourcePicture"
+    - element_info: .form-input .ant-input-affix-wrapper > input
+      find_type: cssSelector
+      operate_type: ENTER
+      step: 回车执行搜索
+    - element_info: //*[contains(@class, 'operation-btns')]/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【生成详情页】
+    - element_info: //*[@id='template-list']//*[contains(@class, 'ant-select-selection__rendered')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【选择模板】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 选择模板
+    - element_info: //*[contains(@class, 'footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【下一步，选择商品】
+    - element_info: .ant-input-search-enter-button .ant-input
+      find_type: cssSelector
+      operate_type: send_keys
+      text: AutoUITestResourcePicture
+      step: 搜索"AutoUITestResourcePicture"
+    - element_info: //*[contains(@class, 'ops-btns')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【查询】
+    - element_info: //*[contains(@class, 'ant-table-tbody')]//*[contains(@class, 'ant-checkbox-input')]
+      find_type: xpath
+      operate_type: click
+      step: 勾选-"AutoUITestResourcePicture"
+    - element_info: //*[contains(@class, 'footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 选择-【立即生成】
+    - element_info: //*[contains(@class, 'operation-btns')]/button[3]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【生成详情页】
+    - element_info: //*[@id='template-list']//*[contains(@class, 'ant-select-selection__rendered')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【选择模板】
+    - element_info: //*[contains(@class, 'ant-select-dropdown-menu')]/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 选择模板
+    - element_info: //*[contains(@class, 'footer')]//*[contains(@class, 'ant-btn-primary')]
+      find_type: xpath
+      operate_type: click
+      step: 点击-【下一步，选择商品】
+check:
+      - element_info: //*[contains(@class, 'generating')]
+        find_type: xpath
+        step: 检查是否"正在生成"状态

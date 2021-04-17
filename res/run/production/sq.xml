@@ -1,0 +1,381 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="wiseoper" parallel="tests" thread-count="2"> <!-- 并行地执行test/classes/methods套件-->
+    <listeners>
+<!--        <listener class-name="util.ExtentTestNGIReporterListener"/> &lt;!&ndash; 测试报告&ndash;&gt;-->
+        <listener class-name="util.TestMonitor"/><!-- 记录日志-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        <listener class-name="util.TestngListener" />
+<!--        <listener class-name="util.RetryListener" />-->
+    </listeners>
+       <test name="PictureUploadMainProcess-上传图片-加入编辑工作台-商品编辑完成-删除商品">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="second" depends-on="first"/>
+                    <group name="third" depends-on="second"/>
+                    <group name="fourth" depends-on="third"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.uploadstaging.Image.ImageAddEdit"/>
+                <class name="test.sq.editstaging.EditFormsImage"/>
+                <class name="test.sq.product.DeleteProductImage"/>
+                <class name="test.sq.uploadstaging.Image.UploadImage"/>
+            </classes>
+        </test>
+        <test name="SystemExcelUploadMainProcess-上传系统Excel-加入编辑工作台-商品编辑完成-删除商品">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="low" depends-on="middle"/>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.uploadstaging.Excel.SystemExcel.SystemExcelAddEdit"/>
+                <class name="test.sq.editstaging.EditFormsSystemExcel"/>
+                <class name="test.sq.product.DeleteProductSystemExcel"/>
+                <class name="test.sq.uploadstaging.Excel.SystemExcel.UploadSystemExcel"/>
+            </classes>
+        </test>
+        <test name="CustomExcelUploadMainProcess-上传自定义Excel-加入编辑工作台-商品编辑完成-删除商品">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="low" depends-on="middle"/>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.uploadstaging.Excel.CustomExcel.CustomExcelAddEdit"/>
+                <class name="test.sq.editstaging.EditFormsCustomExcel"/>
+                <class name="test.sq.product.DeleteProductCustomExcel"/>
+                <class name="test.sq.uploadstaging.Excel.CustomExcel.UploadCustomExcel"/>
+            </classes>
+        </test>
+        <test name="ExhibitEmptyLinkMainProcess-编辑工作台新增商品-空链接编辑完成-链接铺货-删除商品">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="low" depends-on="middle"/>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.editstaging.AddProduct"/>
+                <class name="test.sq.editstaging.SaveEmptyForms"/>
+                <class name="test.sq.link.ExhibitEmptyLink"/>
+                <class name="test.sq.product.DeleteProductEmptyLink"/>
+            </classes>
+        </test>
+        <test name="ExhibitPictureLinkMainProcess-非空链接编辑完成-链接铺货-删除商品-上传图片包">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="fourth" depends-on="third"/>
+                    <group name="third" depends-on="second"/>
+                    <group name="second" depends-on="first"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.editstaging.EditPictureLink"/>
+                <class name="test.sq.link.ExhibitPictureLink"/>
+                <class name="test.sq.product.DeleteProductPictureLink"/>
+                <class name="test.sq.uploadstaging.Image.ImageForLink"/>
+            </classes>
+        </test>
+        <test name="HomePageCheckTest-首页元素检查">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.homepage.CheckHomePage"/>
+            </classes>
+        </test>
+        <test name="TemplateCheck-模板管理-检查模板">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.model.CheckTemplate"/>
+            </classes>
+        </test>
+        <test name="ModelManage-模板管理-修改模特信息">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.model.ModelManage"/>
+            </classes>
+        </test>
+        <test name="TemplateModelGroup-模板管理-模板与模特组合">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="deleteGroup" depends-on="addGroup"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.model.TemplateModelGroup"/>
+            </classes>
+        </test>
+        <test name="MeasureSchematic-配置中心-测量示意图">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.configcenter.MeasureSchematic.AddMeasureSchematic"/>
+                <class name="test.sq.configcenter.MeasureSchematic.ModifyMeasureSchematic"/>
+                <class name="test.sq.configcenter.MeasureSchematic.CheckMeasureSchematic"/>
+            </classes>
+        </test>
+        <test name="AddMeasureSchematic-配置中心-水印配置">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="low" depends-on="middle"/>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.configcenter.WaterMark.AddWaterMark"/>
+                <class name="test.sq.configcenter.WaterMark.StartWaterMark"/>
+                <class name="test.sq.configcenter.WaterMark.DeleteWaterMark"/>
+            </classes>
+        </test>
+        <test name="WashIcon-配置中心-洗涤图标">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.configcenter.WashIcon.AddWashIcon"/>
+                <class name="test.sq.configcenter.WashIcon.ModifyWashIcon"/>
+                <class name="test.sq.configcenter.WashIcon.CheckWashIcon"/>
+            </classes>
+        </test>
+        <test name="Link-链接管理-新增、复制、删除链接">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="low" depends-on="middle"/>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.product.AddLink"/>
+                <class name="test.sq.link.CopyLink"/>
+                <class name="test.sq.link.DeleteLink"/>
+            </classes>
+        </test>
+        <test name="ModelManage-模板管理-类目配置">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.configcenter.CategoriesConfig.CheckCategories"/>
+            </classes>
+        </test>
+        <test name="ModelManage-模板管理-店铺配置">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="low" depends-on="middle"/>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.configcenter.ShopConfig.CheckShop"/>
+                <class name="test.sq.configcenter.ShopConfig.AddGeneralField"/>
+                <class name="test.sq.configcenter.ShopConfig.DeleteGeneralField"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-生成资源图">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.CreateResourcePicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-生成详情页">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.CreateDetailPage"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-新增链接、删除链接">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="middle" depends-on="high"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.editstaging.AddLink"/>
+                <class name="test.sq.editstaging.DeleteLink"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-裁剪、扩边">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.Cut_ExpandPicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-画图">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.DrawPicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-重命名">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.RenamePicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-替换">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.ReplacePicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-添加">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.AddPicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-复制">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.CopyPicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-删除">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.DeletePicture"/>
+            </classes>
+        </test>
+        <test name="EditStaging-编辑工作台-图片空间-保存">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.editstaging.PictureSpace.SavePicture"/>
+            </classes>
+        </test>
+        <test name="UplaodStaging-上货工作台-Excel系统模板-创建、删除模板">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.uploadstaging.Excel.SystemExcel.CreateTemplate"/>
+                <class name="test.sq.uploadstaging.Excel.SystemExcel.DeleteTemplate"/>
+            </classes>
+        </test>
+        <test name="UplaodStaging-上货工作台-Excel自定义模板-创建、新增列、重命名、删除">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <groups>
+                <dependencies>
+                    <group name="second" depends-on="first"/>
+                    <group name="third" depends-on="second"/>
+                    <group name="fourth" depends-on="third"/>
+                </dependencies>
+            </groups>
+            <classes>
+                <class name="test.sq.uploadstaging.Excel.CustomExcel.AddCustomExcelTemplate"/>
+                <class name="test.sq.uploadstaging.Excel.CustomExcel.AddColumn"/>
+                <class name="test.sq.uploadstaging.Excel.CustomExcel.RenameTemplate"/>
+                <class name="test.sq.uploadstaging.Excel.CustomExcel.DeleteCustomExcelTemplate"/>
+            </classes>
+        </test>
+        <test name="HelpPageCheckTest-帮助中心元素检查">
+            <parameter name="browserType" value="chrome" />
+            <parameter name="browserVersion" value="" />
+            <parameter name="remoteIP" value="" />
+            <parameter name="appURL" value="http://www.deepdraw.biz/web/sq/#/passport/login"/>
+            <classes>
+                <class name="test.sq.homepage.CheckHelpPage"/>
+            </classes>
+        </test>
+
+</suite>
+

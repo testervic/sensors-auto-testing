@@ -1,0 +1,23 @@
+title:
+    - case_name: 验证商品名称搜索功能
+testcase:
+    - element_info: //*[contains(@class, 'first-sider-nav')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 点击搜索中心
+    - element_info: //*[contains(@class, 'third-sider-nav')]/li[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击商品搜索
+    - element_info: //*[contains(@class, 'Search-input')]/div/formly-form/formly-field[1]/formly-form-field/nz-form-item/nz-form-control/div/span/dd-form-input/nz-input-group/input
+      find_type: xpath
+      operate_type: send_keys
+      text: Auto3DontTouchMe
+      step: 搜索文件
+    - element_info: //div[text()='商品搜索']
+      find_type: xpath
+      operate_type: click
+      step: 点击商品搜索标题
+check:
+      - element_info: //*[contains(@class, 'picture-box')]
+        find_type: xpath

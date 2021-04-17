@@ -1,0 +1,30 @@
+title:
+    - case_name: 检查系统洗涤图标
+testcase:
+    - element_info: //*[contains(@class, 'navs')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 鼠标移动-【配置中心】
+    - element_info: //*[contains(@class, 'second-navs')]/li/ul/li
+      find_type: xpath
+      operate_type: click
+      step: 点击-【类目配置】
+check:
+      - element_info: //div[text()='经营类目设置']
+        find_type: xpath
+        step: 检查是否经营类目设置页面
+      - element_info: //*[contains(@class, 'category-container')]//*[contains(@class, 'ant-btn')]
+        find_type: xpath
+        step: 检查是否经营类目设置页面
+      - element_info: //span[text()='服饰鞋包']
+        find_type: xpath
+        step: 检查是否经营类目设置页面
+      - element_info: //span[text()='女装']
+        find_type: xpath
+        step: 检查是否经营类目设置页面
+      - element_info: //span[text()='衬衫']
+        find_type: xpath
+        step: 检查是否经营类目设置页面
+      - element_info: //span[text()='T恤']
+        find_type: xpath
+        step: 检查是否经营类目设置页面

@@ -1,0 +1,58 @@
+title:
+    - case_name: 产品素材-综合列表-画图
+testcase:
+    - element_info: //div[@id='mCSB_1_container']//a[@href='#collapseProduct']
+      find_type: xpath
+      operate_type: click
+      step: 点击产品素材
+    - element_info: //a[@href='/authorized/merchant/product']
+      find_type: xpath
+      operate_type: click
+      step: 点击综合列表
+      frame: MainBoard
+    - element_info: //*[@id="searchKeyword"]
+      find_type: xpath
+      operate_type: send_keys
+      text: 综合列表
+      step: 输入搜索内容
+    - element_info: /html/body/div[2]/div[1]/div[2]/div[2]/span
+      find_type: xpath
+      operate_type: click
+      step: 点击搜索
+    - element_info: (//a[@title='图片修改'])[1]
+      find_type: xpath
+      operate_type: click
+      step: 点击"图片"按钮
+    - element_info: (//li[@draggable='true']//img)[1]
+      find_type: xpath
+      operate_type: move_to
+      wait_time: 3000
+      step: 移动到图片
+    - element_info: (//a[@title='裁剪'])[1]
+      find_type: xpath
+      operate_type: click
+      wait_time: 1000
+      step: 点击裁剪
+    - element_info: (//span[text()='画图'])[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击弹窗"画图"按钮
+    - element_info: (//div[@class='qstitle']//img)[2]
+      find_type: xpath
+      operate_type: move_hold
+      wait_time: 1000
+      step: 点击元素画图
+    - element_info: /html/body/div[23]/div/div/div/div/div/div[1]/ul/li[5]/a
+      find_type: xpath
+      operate_type: click
+      wait_time: 2000
+      step: 点击保存
+#    - element_info: //span[text()='保存']
+#      find_type: xpath
+#      operate_type: click
+#      step: 点击保存
+check:
+    - element_info: //div[text()='操作成功']
+      find_type: xpath
+      wait_time: 1000
+      step: 验证是否保存成功

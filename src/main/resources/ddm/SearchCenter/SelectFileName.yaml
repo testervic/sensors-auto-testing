@@ -1,0 +1,23 @@
+title:
+    - case_name: 验证商品标签搜索功能
+testcase:
+    - element_info: //*[contains(@class, 'first-sider-nav')]/ul/li[4]
+      find_type: xpath
+      operate_type: move_to
+      step: 点击搜索中心
+    - element_info: //*[contains(@class, 'third-sider-nav')]/li[2]
+      find_type: xpath
+      operate_type: click
+      step: 点击文件搜索
+    - element_info: //*[contains(@class, 'ant-input-affix-wrapper')]/input
+      find_type: xpath
+      operate_type: send_keys
+      text: Auto
+      step: 录入文件名
+    - element_info: //*[@id="body"]/nz-spin/div/app-group-search/div/div[1]/app-group-serach-filter/article/app-td-input/nz-input-group/input
+      find_type: xpath
+      operate_type: ENTER
+      step: 回车
+check:
+      - element_info: //*[contains(@class, 'img')]
+        find_type: xpath
